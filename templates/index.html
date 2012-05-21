@@ -1,0 +1,270 @@
+{% extends 'base.html' %}
+{% block title %}PyCon India 2012{% endblock %}
+
+ {% block pageheaders %}{% endblock %}
+{% block headerbox %}
+
+<header>
+  <!--
+  {% include "baseframe/networkbar.html" -%}
+  -->
+  <div class="container header navbar" id="navbar">
+    <div class="row">
+      <div class="span5 header-logo" onclick='scroll("home")'>
+        <span class="title">&gt;&gt;&gt; PyCon India 2012</span>
+      </div>
+      <div class="span5">
+        <nav>
+          <a href="#home" onclick="scroll('home')">home</a>
+          <a href="#participate" onclick="scroll('participate')">participate</a>
+          <a href="#sponsors" onclick="scroll('sponsors')">sponsors</a>
+          <a href="#schedule" onclick="scroll('schedule')">talks</a>
+          <a href="#venue" onclick="scroll('venue')">venue</a>
+        </nav>
+      </div>
+      <div class="span2 header-social">
+        <a href="http://twitter.com/#!/pyconindia" class="twitter"></a>
+        <a href="http://www.facebook.com/PyConIndia" target="_blank" class="fb"></a>
+      </div>
+      <!--
+      <div class="span1 hg"><a href="#hasgeek" onclick="scroll('hasgeek')"><img src="/static/img/hg-logo.png" /></a></div>
+      -->
+    </div>
+    <div class="row mobile-header">
+      <div class="span12 header-social-mobile">
+        <a href="http://twitter.com/#!/pyconindia" class="twitter"></a>
+        <a href="http://www.facebook.com/PyConIndia" target="_blank" class="fb"></a>
+      </div>
+    </div>
+  </div>
+</header>
+{% endblock %}
+{% block content %}
+<section>
+  <div class="container" >
+       <!--<div class="row" id="home">
+        <div class="span12">
+          <div class="monitor">
+            <div class="mon1 borrad12"></div>
+            <div class="mon2 borrad12"></div>
+            <div class="mon3 borrad12"></div>
+            <div class="mon4 borrad12"></div>
+            <div class="mon5"></div>
+          </div>
+         
+          <div class="mast">
+            <p>Let there be sysadmins</p>
+            <p class="date">May 26th, 2012 | Dharamaram College, Bangalore</p>
+          </div>
+        </div>
+      </div>-->
+      <div class="row content" id="home" >
+        <div class="span12" align="center">
+          <h1 style="font-size:2.0em;">PyCon India 2012</h1>
+        </div>
+      </div>
+      <div class="row" >
+        <div class="span12" align="center"><h1>WHEN: Sometime in September, 2012 <br />VENUE: Somewhere in Pune</h1></div>
+      </div>
+      <div class="row content" style="margin-top: 10px">
+        <div class="span12">
+          <h2>About PyCon India</h2>
+          <p>PyCon India is the primary <a href="http://www.python.org/">Python</a> conference in India. A purely volunteer effort, it is being hosted for the third time in India, and will attract some of the best Python developers in India and abroad.</p>
+
+        </div>
+      </div>
+      <div class="row content full" id="participate">
+        <div class="span4">
+          <h2>Participate</h2>
+          <p>Get the tickets now!</p>
+          <p>Look at the <a href="http://funnel.hasgeek.com/rootconf">existing proposals.</a></p>
+          <p><a class="btn-warning btn-large" target=_blank href="#">Book now</a></p>
+        </div><!--/span-->
+         <div class="span4">
+          <h2>Speak</h2>
+          <p>Do you have what it takes to speak to fellow Pythonistas?</p>
+          <p><a class="btn-warning btn-large" target=_blank href="#">Propose a Session</a></p>
+        </div><!--/span-->
+        <div class="span4">
+          <h2>Sponsor</h2>
+          <p>Would you or your employer like to sponsor PyCon India? </p>
+          <p><a class="btn-warning btn-large" target=_blank href="#" target="_blank">Get in Touch</a></p>
+        </div><!--/span-->
+      </div><!--/row-->
+      
+      <div class="row content" id="sponsors">
+        <div class="span12"><h2>Sponsors</h2></div>
+        </div><!--/row-->
+        <div class="row">
+          <article class="open hsponsor span2">
+            <p class="logo"><img alt="Become a Sponsor" src="{{ url_for('static', filename='img/you.gif') }}"></p>
+          </article>
+      </div><!--/row-->
+
+
+    <div class="row content" id="schedule">
+      <div class="span12"><h2 id="talks">Talks</h2></div>
+    </div>
+    <div class="row">
+      <div class="span12">
+        <p>Call for Proposals will be annouced shortly.</p>
+      </div>
+    </div>
+
+    <!--
+    <div class="row content" id="schedule">
+      <div class="span12"><h2 id="talks">Selected Talks</h2></div>
+    </div>
+    <div class="row">
+    <div class="span4">
+        <article class="session-video clearfix">
+            <a href="http://www.youtube.com/watch?v=JBqVtdzvpos">
+            <p class="thumbnail span2"><img alt="Thumbnail" src="http://img.youtube.com/vi/JBqVtdzvpos/mqdefault.jpg"></p>
+            <h4>Continuous Integration made fun with Jenkins & Hubot</h4>
+            </a>
+            <h5>Sameer Segal</h5>
+        </article>
+    </div>
+    <div class="span4">
+        <article class="session-video clearfix">
+            <a href="http://www.youtube.com/watch?v=kZ-kVqdpiZM">
+            <p class="thumbnail span2"><img alt="Thumbnail" src="http://img.youtube.com/vi/kZ-kVqdpiZM/mqdefault.jpg"></p>
+            <h4>Securing a Linux Web Server in 10 Steps or Less</h4>
+            </a>
+            <h5>Akash Mahajan</h5>
+        </article>
+    </div>
+    </div>
+    <div class="row schedule">
+      <div class="span12">
+        <table>
+          <tr>
+            <th>Talk</th>
+            <th>Speaker</th>
+            <th>Track</th>
+          </tr>
+          <tr>
+            <td><a href="http://funnel.hasgeek.com/rootconf/294-puppet-in-stand-alone-mode-or-why-config-management-is-useful-for-0-systems">Puppet in Stand Alone Mode or Why Config management is useful for 0+ systems</a></td>
+            <td>Sarguru Nathan</td>
+            <td>Configuration Management</td>
+          </tr>
+          <tr>
+            <td><a href="http://funnel.hasgeek.com/rootconf/288-continuous-integration-made-fun-with-jenkins-hubot-gtalk">Continuous Integration made fun with Jenkins & Hubot (+ Gtalk)</a></td>
+            <td>Sameer Segal</td>
+            <td>Configuration Management</td>
+          </tr>
+          <tr>
+            <td><a href="http://funnel.hasgeek.com/rootconf/314-build-your-own-storage-device-san">Build your own Storage Device (SAN) !</a></td>
+            <td>Sriram Narayanan</td>
+            <td>Cloud and Virtualization</td>
+          </tr>
+          <tr>
+            <td><a href="http://funnel.hasgeek.com/rootconf/313-performance-tuning-101-an-introduction-to-performance-tuning-an-application-in-managed-environment">Performance Tuning 101 - An introduction to performance tuning an application in managed environment</a></td>
+            <td>Janmejay Singh</td>
+            <td>Performance Tuning</td>
+          </tr>
+          <tr>
+            <td><a href="http://funnel.hasgeek.com/rootconf/304-high-performant-virtualization-using-openvz">High performant virtualization using OpenVZ</a></td>
+            <td>Nilesh B</td>
+            <td>Cloud and Virtualization</td>
+          </tr>
+          <tr>
+            <td><a href="http://funnel.hasgeek.com/rootconf/301-automated-and-adaptive-infrastructure-monitoring-using-chef-nagios-and-graphite">Automated and Adaptive Infrastructure Monitoring using Chef, Nagios and Graphite</a></td>
+            <td>Pratima Singh</td>
+            <td>Configuration Management</td>
+          </tr>
+          <tr>
+            <td><a href="http://funnel.hasgeek.com/rootconf/296-virtualization-with-kvm-and-libvirt">Virtualization with KVM (and Libvirt)</a></td>
+            <td>Kashyap Chamarthy</td>
+            <td>Cloud and Virtualization</td>
+          </tr>
+          <tr>
+            <td><a href="http://funnel.hasgeek.com/rootconf/333-creating-provisioning-cloud-resources-with-aws-cloudformation">Creating & Provisioning Cloud Resources with AWS CloudFormation</a></td>
+            <td>Janakiram MSV</td>
+            <td>Cloud and Virtualization</td>
+          </tr>
+          <tr>
+            <td><a href="http://funnel.hasgeek.com/rootconf/329-securing-a-linux-web-server-in-10-steps-or-less">Securing a Linux Web Server in 10 Steps or Less</a></td>
+            <td>Akash Mahajan</td>
+            <td>Security</td>
+          </tr>
+          <tr>
+            <td><a href="http://funnel.hasgeek.com/rootconf/324-openshift-deployments-for-the-rest-of-us">Openshift: Deployments for the rest of us</a></td>
+            <td>Anurag</td>
+            <td>Cloud and Virtualization</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    -->
+
+
+      <div class="row content" id="venue"><div class="span12"><h2 id="location">Venue</h2></div></div>
+       <div class="row">
+        <div class="span6">
+          <div id="map" class="map"></div>
+        </div>
+        <div class="span6">
+        <h3 style="text-transform: uppercase; font-size: 25pt">Pune</h3>
+            <p><strong>Some Place</strong>, Pune</p><hr />
+            <p>PyCon India 2012 is set in Pune city.</p>
+
+          <h3><span>WHEN</span> : September ??, 2012</h3>
+        </div>
+      </div>
+
+      <div class="row content" id="ipss">
+        <div class="span12">
+          <h2 id="abouthg">About IPSS</h2>
+          
+          <p><a href="http://www.ipss.org.in">Indian Python Software Society</a> is an organization to promote Python in India. IPSS has been conducting PyCon India conference from past 4 years.</p>
+
+        </div><!--/span-->
+      </div><!--/row-->
+    </div>
+</section>    
+{% endblock %}
+{% block footerscripts %} 
+<script>
+
+$(function() {
+  var map = new L.Map('map');
+  var cloudmadeUrl = 'http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
+      subDomains = ['otile1','otile2','otile3','otile4'],
+      cloudmadeAttrib = '<a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>, <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC-BY-SA</a>';
+      var cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18, attribution: cloudmadeAttrib, subdomains: subDomains});
+
+      var venue = new L.LatLng(12.9334, 77.6050); // geographical point (longitude and latitude)
+      var center = new L.LatLng(12.936, 77.62);
+      var mobile_center = new L.LatLng(12.935, 77.591);
+      map.setView(center, 14).addLayer(cloudmade);
+      if (map.getSize().x < 768) { map.setView(venue,14); } // on smaller screen where map takes full-width
+
+      var venue_marker = new L.Marker(venue);
+      map.addLayer(venue_marker);
+      venue_marker.bindPopup('Pune').openPopup();
+      map.scrollWheelZoom.disable();
+      map.doubleClickZoom.disable();
+      
+      map.on('zoomend', onZoomend);
+      function onZoomend(){ map.setView(venue, map.getZoom()); };
+});
+
+function scroll(scrollToId)
+{   
+    p = $("#" + scrollToId);
+    scrollTo = p.position().top;
+    $('html, body').animate({scrollTop: scrollTo}, 600);
+}
+function cursorAnimation()
+{ 
+  $(".cursor").animate({opacity: 0}, 200, "swing").animate({opacity: .6}, 400).animate({opacity: 0.6}, 400).animate({opacity:0}, 200);
+}
+$(document).ready(function()
+{
+  $(window).resize(function(){    $('header').css('margin-left', (-($('header').width())/2) + "px");});
+  setInterval ( "cursorAnimation()", 1000 );
+  $('header').css('margin-left', (-($('header').width())/2) + "px");
+});
+</script>
+{% endblock %}

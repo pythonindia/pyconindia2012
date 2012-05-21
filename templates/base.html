@@ -1,0 +1,29 @@
+{% extends "baseframe.html" %}
+{% block baseheadline %}{% endblock %}
+
+{% block headerbox %}
+    <header>
+      <div id="page-header" class="container">
+        <div id="logo"><a href="{{ url_for('index') }}" title="Home">{{ config['SITE_TITLE'] }}</a></div>
+      </div>
+    </header>
+{% endblock %}
+    
+
+{% block basecontent %}
+  {% block content %}{% endblock %}
+{% endblock %}
+
+{% block basefooter %}
+  <footer>
+    <div class="footer-inner">
+      <div class="container">
+        {% block footer %}
+          <span class="no-print">Copyright &copy; 2012 <a href="http://ipss.org.in/">IPSS</a></span> 
+          | <span class="no-print">Created using <a href="http://hasgeek.com/">HasGeek</a>'s <a href="http://github.com/hasgeek/baseframe">Baseframe</a>
+        {% endblock %}
+      </div>
+    </div>
+  </footer>
+{% endblock %}
+
