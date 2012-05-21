@@ -40,11 +40,11 @@ header a, header a:hover {
 }
 
 footer .footer-inner	{
- 	background: url(/static/img/nav-bg.png) repeat-x top;	
+ 	background: url(../img/nav-bg.png) repeat-x top;	
  }
 
 .content	{
-	background: url(/static/img/nav-bg.png) repeat-x top;	
+	background: url(../img/nav-bg.png) repeat-x top;	
 	margin-top:126px;
 	padding-top: 25px;
 }
