@@ -67,5 +67,7 @@ def index():
 # delete the rule for favicon
 app.url_map._rules = [rule for rule in app.url_map._rules if rule.rule != '/favicon.ico']
 
+application = app
+
 if __name__ == "__main__":
     app.run()
