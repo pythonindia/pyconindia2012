@@ -43,7 +43,6 @@ class ReverseProxied(object):
 app = Flask(__name__, instance_relative_config=True)
 app.wsgi_app = ReverseProxied(app.wsgi_app)
 
-app.debug = True
 app.register_blueprint(baseframe)
 
 assets = Environment(app)
