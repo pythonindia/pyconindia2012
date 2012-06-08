@@ -18,6 +18,10 @@ Get git-submodules.
     $ git submodule init
     $ git submodule update
 
+Setup test database.
+
+    $ make bootstrap
+
 And run the app.
 
     $ make run
