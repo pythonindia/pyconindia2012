@@ -1,0 +1,3 @@
+[submodule "funnel"]
+	path = funnel
+	url = git://github.com/ipss/funnel.git
