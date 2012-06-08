@@ -13,6 +13,11 @@ Setup virtualenv.
 
     $ make venv
 
+Get git-submodules.
+
+    $ git submodule init
+    $ git submodule update
+
 And run the app.
 
     $ make run
