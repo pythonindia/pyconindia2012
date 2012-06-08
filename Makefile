@@ -5,11 +5,8 @@ VENV=.
 
 run:
 	mkdir -p static/css static/js
-	$(VENV)/bin/python webapp.py
-
-funnel: 
 	cp funnel-settings.py funnel/settings.py
-	$(VENV)/bin/python funnel/website.py
+	$(VENV)/bin/uwsgi --ini uwsgi.ini
 
 venv:
 	virtualenv $(VENV)
