@@ -1,9 +1,15 @@
 
 VENV=.
 
+.PHONY: funnel run
+
 run:
 	mkdir -p static/css static/js
-	$(VENV)/bin/uwsgi -H $(VENV) --http 127.0.0.1:7001 --wsgi webapp -p1 -t 5
+	$(VENV)/bin/python webapp.py
+
+funnel: 
+	cp funnel-settings.py funnel/settings.py
+	$(VENV)/bin/python funnel/website.py
 
 venv:
 	virtualenv $(VENV)
