@@ -12,3 +12,5 @@ venv:
 	virtualenv $(VENV)
 	$(VENV)/bin/pip install -r requirements.txt
 
+bootstrap:
+	wget -O funnel/test.db http://anandology.com/tmp/pyconindia-funnel.db
