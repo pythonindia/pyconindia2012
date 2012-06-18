@@ -64,7 +64,7 @@
         </div>
       </div>
       <div class="row" >
-        <div class="span12" align="center"><h1>WHEN: 28, 29, 30 September <br />VENUE:<a href=http://www.dvk.in>Dharmaram Vidya Kshetram</a> Bangalore,India</h1></div>
+        <div class="span12" align="center"><h1>WHEN: 28, 29, 30 September <br />VENUE: Dharmaram Vidya Kshetram, Bangalore</h1></div>
       </div>
       <div class="row content" style="margin-top: 10px">
         <div class="span12">
@@ -76,14 +76,17 @@
       <div class="row content full" id="participate">
         <div class="span4">
           <h2>Participate</h2>
-          <p>Get the tickets now!</p>
-          <p>Look at the <a href="#">existing proposals.</a></p>
-          <p><a class="btn-warning btn-large" target=_blank href="#">Book now</a></p>
+          <p>Get the tickets now!<br/><br/></p>
+
+          <!-- <p>Look at the <a href="#">existing proposals.</a></p> -->
+
+          <p><a class="btn-warning btn-large" target=_blank href="http://pyconindia2012.doattend.com/">Book now</a></p>
         </div><!--/span-->
          <div class="span4">
           <h2>Speak</h2>
           <p>Do you have what it takes to speak to fellow Pythonistas?</p>
-          <p><a class="btn-warning btn-large" target=_blank href="#">Propose a Session</a></p>
+
+          <p><a class="btn-warning btn-large disabled" href="#" id="propose-session">Propose a Session</a></p>
         </div><!--/span-->
         <div class="span4">
           <h2>Sponsor</h2>
@@ -213,14 +216,18 @@
             To get there, enter Christ University’s main entrance gate
             on Marigowda Road and drive straight down to Dharmaram
             Vidya Kshetram, within the campus.
+          </p>
 
+          <p>
             Christ University is at Dairy Circle, half a kilometre
-            from the Forum mall.
-
+            from the Forum mall. If you are approaching from Dairy
+            Circle, drive up to Hosur Road for a U-turn. The campus
+            has sufficient parking space.
+          </p>
+          
+          <p>
             The confernce is in DVK's Theology and Philosophy blocks,
-            behind the main auditorium. If you are approaching from
-            Dairy Circle, drive up to Hosur Road for a U-turn. The
-            campus has sufficient parking space.
+            behind the main auditorium. 
           </p>
 
           <p><a href="http://goo.gl/maps/jYyv">View location in Google Maps</a></p>
@@ -264,6 +271,10 @@ $(function() {
       
       map.on('zoomend', onZoomend);
       function onZoomend(){ map.setView(venue, map.getZoom()); };
+
+      $("#propose-session").click(function() {
+          alert("Call For Proposals will be annouced in couple of days.");
+      });
 });
 
 function scroll(scrollToId)
