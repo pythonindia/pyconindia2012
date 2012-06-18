@@ -14,3 +14,9 @@ venv:
 
 bootstrap:
 	wget -O funnel/test.db http://anandology.com/tmp/pyconindia-funnel.db
+
+copy:
+	rsync -av overwrites/* .
+
+clean:
+	cd funnel && git reset --hard

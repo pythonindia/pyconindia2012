@@ -22,6 +22,10 @@ Setup test database.
 
     $ make bootstrap
 
+Install custom template and css modifications to funnel.
+
+    $ make copy
+
 And run the app.
 
     $ make run
