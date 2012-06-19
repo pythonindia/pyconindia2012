@@ -1,7 +1,7 @@
-@font-face { font-family: Inconsolata; src: url(/static/Inconsolata.otf); } 
+@font-face { font-family: Inconsolata; src: url(../Inconsolata.otf); } 
 
 body	{
-	background: url(/static/img/bg.png) #F7F6F0;
+	background: url(../img/bg.png) #F7F6F0;
 	color: #DDD;
         color: #000;
 }
@@ -106,11 +106,11 @@ nav a:hover	{
 	width: 20px;
 	margin: 10px;
 	margin-top: 35px;
-	background: url(/static/img/twitter.png) no-repeat;
+	background: url(../img/twitter.png) no-repeat;
 	float: left;
 }
 .header-social .fb	{
-	background: url(/static/img/fb.png) no-repeat;
+	background: url(../img/fb.png) no-repeat;
 }
 .header-social .twitter:hover, .header-social .fb:hover	{
 	background-position: center bottom;
