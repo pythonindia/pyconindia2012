@@ -9,7 +9,7 @@ run:
 	$(VENV)/bin/uwsgi --ini uwsgi.ini
 
 venv:
-	virtualenv $(VENV)
+	virtualenv --no-site-packages $(VENV)
 	$(VENV)/bin/pip install -r requirements.txt
 
 bootstrap:
