@@ -39,18 +39,17 @@ class ProposalForm(wtf.Form):
                  (0, u"I’m proposing a topic for someone to speak on")])
     title = wtf.TextField('Title', validators=[wtf.Required()],
         description="The title of your session")
-    section = wtf.QuerySelectField('Section', get_label='title', validators=[wtf.Required()],
-        widget=wtf.ListWidget(prefix_label=False), option_widget=wtf.RadioInput())
+    session_type = wtf.RadioField('Session type', validators=[wtf.Required()], choices=[
+        ('Talk', 'Talk'),
+        ('Tutorial', 'Tutorial'),
+        ])
+
+    #section = wtf.QuerySelectField('Section', get_label='title', validators=[wtf.Required()],
+    #    widget=wtf.ListWidget(prefix_label=False), option_widget=wtf.RadioInput())
+    section = wtf.HiddenField('Section')
+
     objective = wtf.TextAreaField('Objective', validators=[wtf.Required()],
         description="What is the expected benefit for someone attending this?")
-    session_type = wtf.RadioField('Session type', validators=[wtf.Required()], choices=[
-        ('Lecture', 'Lecture'),
-        ('Demo', 'Demo'),
-        ('Tutorial', 'Tutorial'),
-        ('Workshop', 'Workshop'),
-        ('Discussion', 'Discussion'),
-        ('Panel', 'Panel'),
-        ])
     technical_level = wtf.RadioField('Technical level', validators=[wtf.Required()], choices=[
         ('Beginner', 'Beginner'),
         ('Intermediate', 'Intermediate'),
@@ -58,8 +57,8 @@ class ProposalForm(wtf.Form):
         ])
     description = wtf.TextAreaField('Description', validators=[wtf.Required()],
         description="A detailed description of the session")
-    requirements = wtf.TextAreaField('Requirements',
-        description="For workshops, what must participants bring to the session?")
+    #requirements = wtf.TextAreaField('Requirements',
+    #    description="For workshops, what must participants bring to the session?")
     slides = wtf.html5.URLField('Slides', validators=[wtf.Optional(), wtf.URL()],
         description="Link to your slides. These can be just an outline initially. "\
             "If you provide a Slideshare link, we'll embed slides in the page")
