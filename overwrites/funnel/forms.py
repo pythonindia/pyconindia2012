@@ -34,23 +34,27 @@ class ProposalForm(wtf.Form):
     email = wtf.html5.EmailField('Your email address', validators=[wtf.Required()],
         description="An email address we can contact you at. "\
             "Not displayed anywhere")
-    speaking = wtf.RadioField("Are you speaking?", coerce=int,
-        choices=[(1, u"I will be speaking"),
-                 (0, u"I’m proposing a topic for someone to speak on")])
+    website = wtf.TextField('Your phone number', validators=[wtf.Required()],
+        description="A phone number we can contact you at. "\
+            "Not displayed anywhere")
+
+    #speaking = wtf.RadioField("Are you speaking?", coerce=int,
+    #    choices=[(1, u"I will be speaking"),
+    #             (0, u"I’m proposing a topic for someone to speak on")])
+    speaking = wtf.HiddenField("speaking", default=1)
+
     title = wtf.TextField('Title', validators=[wtf.Required()],
         description="The title of your session")
-    session_type = wtf.RadioField('Session type', validators=[wtf.Required()], choices=[
-        ('Talk', 'Talk'),
-        ('Tutorial', 'Tutorial'),
-        ])
-
-    #section = wtf.QuerySelectField('Section', get_label='title', validators=[wtf.Required()],
-    #    widget=wtf.ListWidget(prefix_label=False), option_widget=wtf.RadioInput())
-    section = wtf.HiddenField('Section')
+    section = wtf.QuerySelectField('Section', get_label='title', validators=[wtf.Required()],
+        widget=wtf.ListWidget(prefix_label=False), option_widget=wtf.RadioInput())
 
     objective = wtf.TextAreaField('Objective', validators=[wtf.Required()],
         description="What is the expected benefit for someone attending this?")
-    technical_level = wtf.RadioField('Technical level', validators=[wtf.Required()], choices=[
+    session_type = wtf.RadioField('Session type', validators=[wtf.Required()], default='Talk', choices=[
+        ('Talk', 'Talk'),
+        ('Tutorial', 'Tutorial'),
+        ])
+    technical_level = wtf.RadioField('Technical level', validators=[wtf.Required()], default='Beginner', choices=[
         ('Beginner', 'Beginner'),
         ('Intermediate', 'Intermediate'),
         ('Advanced', 'Advanced'),
@@ -59,13 +63,15 @@ class ProposalForm(wtf.Form):
         description="A detailed description of the session")
     #requirements = wtf.TextAreaField('Requirements',
     #    description="For workshops, what must participants bring to the session?")
+    requirements = wtf.HiddenField('requirements', default='')
     slides = wtf.html5.URLField('Slides', validators=[wtf.Optional(), wtf.URL()],
         description="Link to your slides. These can be just an outline initially. "\
             "If you provide a Slideshare link, we'll embed slides in the page")
-    links = wtf.TextAreaField('Links',
-        description="Other links, one per line. Provide links to your profile and "\
-            "slides and videos from your previous sessions; anything that'll help "\
-            "folks decide if they want to attend your session")
+    #links = wtf.TextAreaField('Links',
+    #    description="Other links, one per line. Provide links to your profile and "\
+    #        "slides and videos from your previous sessions; anything that'll help "\
+    #        "folks decide if they want to attend your session")
+    links = wtf.HiddenField('links', default='')
     bio = wtf.TextAreaField('Speaker bio', validators=[wtf.Required()],
         description="A brief outline of who you are and how you are qualified to be "\
             "taking this session")
