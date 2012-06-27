@@ -5,4 +5,5 @@ static/.webassets-cache/
 *-packed.*
 .swp
 .py[cox]
-
+*.log
+local
