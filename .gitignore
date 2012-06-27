@@ -3,3 +3,6 @@ include/
 lib/
 static/.webassets-cache/
 *-packed.*
+.swp
+.py[cox]
+
