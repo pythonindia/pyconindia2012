@@ -1,0 +1,22 @@
+{
+    "application": "eventframe",
+    "identifier": "pyconindia2012",
+    "name": "PyCon India 2012",
+    "author": "IPSS",
+    "description": "PyCon India 2012 website template",
+    "license": "All rights reserved",
+    "doctype": "html5",
+    "options": {
+        "assets_css": [
+            "js/leaflet/leaflet.css",
+            "css/app.css",
+            "css/pyconindia.css"
+        ],
+        "assets_js": [
+            "js/jquery.smooth-scroll.min.js",
+            "js/jquery.twitter.js",
+            "js/leaflet/leaflet.js",
+            "js/app.js"
+        ]
+    }
+}

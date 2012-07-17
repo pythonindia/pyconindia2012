@@ -1,0 +1,27 @@
+<section id="blog" class="blog section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Blog</h2>
+    </div>
+    <div class="row">
+      <div class="span7">
+        {% for post in feed(limit=4) -%}
+          <h3>
+            <a href="{{ url_for('node', folder=post.folder.name, node=post.name) }}">{{ post.title }}</a>
+            <small>{{ post.published_at|longdate }}</small>
+          </h3>
+          {{ post.description }}
+        {%- else -%}
+          <p>(No blog entries have been written so far)</p>
+        {%- endfor %}
+        <h3><a href="/blog/">See all blog posts</a></h3>
+      </div>
+      <div class="span5">
+        <div class="section-subheader">
+          <h3><a href="http://twitter.com/the5el" target="_blank">On Twitter</a></h3>
+        </div>
+        <div id="twitter"></div>
+      </div>
+    </div><!-- /row -->
+  </div><!-- /container -->
+</section><!-- /about -->
