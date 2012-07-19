@@ -1,5 +1,9 @@
-{% from "baseframe/components.html" import networkbar with context -%}
 {% extends "eventframe.html" -%}
+
+{% block favicon %}
+  <link rel="icon" href="{{ theme_static('img/favicon.ico') }}"/>
+{% endblock %}
+
 
 {% block headerbox %}
 <header class="header">
