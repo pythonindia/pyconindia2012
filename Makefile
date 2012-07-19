@@ -5,12 +5,9 @@ VENV=$(PWD)
 
 run: copy
 	mkdir -p static/css static/js
-	cp funnel-settings.py funnel/settings.py
 	$(VENV)/bin/uwsgi --ini uwsgi.ini
 
 eventframe: copy
-	cp eventframe-settings.py eventframe/instance/settings.py
-	cd eventframe && ln -sF ../themes .
 	cd eventframe && $(VENV)/bin/python runserver.py
 
 venv:
@@ -22,6 +19,9 @@ bootstrap:
 
 copy:
 	rsync -av overwrites/* .
+	cp funnel-settings.py funnel/settings.py
+	mkdir -p var/eventframe-instance
+	cp eventframe-settings.py var/eventframe-instance/settings.py
 
 clean:
 	cd funnel && git reset --hard

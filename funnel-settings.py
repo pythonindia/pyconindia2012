@@ -8,8 +8,10 @@ SITE_SUPPORT_EMAIL = 'test@example.com'
 TYPEKIT_CODE=''
 #: Google Analytics code UA-XXXXXX-X
 GA_CODE=''
+import os
+path = os.path.abspath("var/pyconindia-funnel.db")
 #: Database backend
-SQLALCHEMY_DATABASE_URI = 'sqlite:///test.db'
+SQLALCHEMY_DATABASE_URI = 'sqlite:///' + path
 #: Secret key
 SECRET_KEY = 'make this something random'
 #: Timezone
