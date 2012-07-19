@@ -25,7 +25,7 @@ LASTUSER_CLIENT_ID = 'Ft7DShD6TXuWWNQR3a23Ng'
 LASTUSER_CLIENT_SECRET = 'SOmDVUGwTZSlc4V-HNIqvQzp53UkcyQDC-boHoE4zeLQ'
 #: Path to site themes (must be an absolute path)
 #THEME_PATHS = '../themes'
-THEME_PATHS = '/Users/anand/github/ipss/pyconindia2012/themes'
+THEME_PATHS = 'themes'
 #: Mail settings
 #: MAIL_FAIL_SILENTLY : default True
 #: MAIL_SERVER : default 'localhost'
