@@ -1,4 +1,3 @@
-{% from "baseframe/components.html" import networkbar with context -%}
 {% from theme("inc/map_script.html") import mapscript -%}
 {% extends theme("layout.html") %}
 
@@ -10,13 +9,11 @@
 
 {% block headerbox %}
 <header class="header">
-  {{ networkbar(siteid='events', login=false) }}
   <div class="container masthead-container2">
     <div id="masthead2">
       <div id="banner">
 
         <h1 style="font-size: 3.0em; line-height: 1.0em; padding: 10px;">PyCon India 2012</h1>
-
 
         <h2 style="font-size: 1.5em; padding: 0px;">28-30 September 2012</h2>
         <h2 style="font-size: 1.5em; padding: 0px;"><em>Dharmaram Vidya Kshetram</em>, Bangalore</h2>
@@ -34,7 +31,6 @@
         <li><a href="#talks">Talks</a></li>
         <li><a href="#sponsors">Sponsors</a></li>
         <li><a href="#venue">Venue</a></li>
-        <li><a href="#partners">Partners</a></li>
         <li class="register"><a href="http://pyconindia2012.doattend.com/">Register</a></li>
       </ul>
     </div>
@@ -50,7 +46,7 @@
 
 {% include theme("inc/sponsors.html") %}
 {% include theme("inc/venue.html") %}
-{% include theme("inc/partners.html") %}
+{#% include theme("inc/partners.html") %#}
 {% endblock %}
 
 {% block footerscripts %}
