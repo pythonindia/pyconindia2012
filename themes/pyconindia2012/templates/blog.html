@@ -11,7 +11,7 @@
 <div class="row blog">
   <div class="span7">
     {% for post in feed() -%}
-      <h3><a href="{{ url_for('node', folder=post.folder.name, node=post.name) }}">{{ post.title }}</a></h3>
+      <h3><a href="/2012{{ url_for('node', folder=post.folder.name, node=post.name) }}">{{ post.title }}</a></h3>
       <div class="post-date"> <small>{{ post.published_at|longdate }}</small> <span class="author">{{ post.user.fullname }}</span></div>
       <div class="post-content">
         {{ post.content }}
