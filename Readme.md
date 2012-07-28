@@ -30,4 +30,3 @@ And run the app.
 
     $ make run
 
-
