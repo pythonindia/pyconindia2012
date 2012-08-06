@@ -1,17 +1,18 @@
 # -*- coding: utf-8 -*-
+#: Site title
+SITE_TITLE = 'HasGeek Eventframe'
+#: Site id (for network bar)
+SITE_ID = 'events'
+#: Admin domains. The first is considered primary
+ADMIN_HOSTS = ['0.0.0.0', '127.0.0.1', 'admin.in.pycon.org']
+#: Using SSL?
+USE_SSL = True
 
-#: The title of this site
-SITE_TITLE='PyCon India 2012 Funnel'
-#: Support contact email
-SITE_SUPPORT_EMAIL = 'test@example.com'
-#: TypeKit code for fonts
-TYPEKIT_CODE=''
-#: Google Analytics code UA-XXXXXX-X
-GA_CODE=''
 import os
-path = os.path.abspath("var/pyconindia-funnel.db")
+dbpath = os.path.abspath("var/pyconindia.db")
+
 #: Database backend
-SQLALCHEMY_DATABASE_URI = 'sqlite:///' + path
+SQLALCHEMY_DATABASE_URI = 'sqlite:///' + dbpath
 #: Secret key
 SECRET_KEY = 'make this something random'
 #: Timezone
@@ -19,9 +20,12 @@ TIMEZONE = 'Asia/Calcutta'
 #: LastUser server
 LASTUSER_SERVER = 'https://auth.hasgeek.com/'
 #: LastUser client id
-LASTUSER_CLIENT_ID = '8pI-AXENSeO4EvP7qrw-sg'
+LASTUSER_CLIENT_ID = 'Ft7DShD6TXuWWNQR3a23Ng'
 #: LastUser client secret
-LASTUSER_CLIENT_SECRET = 'QuNra6LOT5av9SzKd0FPwQsq7G1soVTkGPQVUBXR2HpA'
+LASTUSER_CLIENT_SECRET = 'SOmDVUGwTZSlc4V-HNIqvQzp53UkcyQDC-boHoE4zeLQ'
+#: Path to site themes (must be an absolute path)
+#THEME_PATHS = '../themes'
+THEME_PATHS = 'themes'
 #: Mail settings
 #: MAIL_FAIL_SILENTLY : default True
 #: MAIL_SERVER : default 'localhost'
@@ -33,8 +37,8 @@ LASTUSER_CLIENT_SECRET = 'QuNra6LOT5av9SzKd0FPwQsq7G1soVTkGPQVUBXR2HpA'
 #: DEFAULT_MAIL_SENDER : default None
 MAIL_FAIL_SILENTLY = False
 MAIL_SERVER = 'localhost'
-DEFAULT_MAIL_SENDER = ('Bill Gate', 'test@example.com')
+DEFAULT_MAIL_SENDER = ('HasGeek', 'test@example.com')
 #: Logging: recipients of error emails
-ADMINS=[]
+ADMINS = []
 #: Log file
-LOGFILE='error.log'
+LOGFILE = 'error.log'

@@ -7,3 +7,4 @@ static/.webassets-cache/
 .py[cox]
 *.log
 local
+*.db

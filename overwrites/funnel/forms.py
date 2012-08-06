@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 
-import flaskext.wtf as wtf
+try:
+    import flaskext.wtf as wtf
+except ImportError:
+    import flask.ext.wtf as wtf
 
 from models import SPACESTATUS, ProposalSpaceSection
 

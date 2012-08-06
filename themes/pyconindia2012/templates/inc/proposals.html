@@ -1,0 +1,41 @@
+<section id="talks" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="right">Talks</h2>
+    </div>
+    <div>
+    Call For Proposals is open. Look at the <a href="/2012/funnel/pyconindia2012/">existing proposals</a>.
+    </div>
+
+    {#
+    <div class="row">
+      {%- with proposals_blurb = fragment('2012', 'proposals-blurb') %}
+        <div class="span4 box push-right">
+          {{ proposals_blurb.content }}
+          <p><a class="btn btn-success btn-wide" href="{{ url_for('node', folder=folder.name, node='proposals') }}">View session proposals</a></p>
+        </div>
+        <div class="span8">
+          {%- with proposals = getnode('2012', 'proposals').confirmed() %}
+            <ul id="funnel-preview" class="grid container-fluid">
+              <li class="row-fluid header">
+                <div class="span7 funnel-preview-title">{{ proposals_blurb.title }}</div>
+                <div class="span3 funnel-preview-by">By</div>
+              </li>
+              {% for proposal in proposals[:5] -%}
+		<li class="row-fluid item" data-section="{{ proposal['section_name'] }}">
+		  <div class="span7 funnel-preview-title"><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></div>
+                  <div class="span3 funnel-preview-by">{{ proposal['proposer'] }}</div>
+                </li>
+              {%- else -%}
+                <li class="row-fluid">
+                  <div class="span12"><em>(No proposals found)</em></div>
+                </li>
+              {%- endfor %}
+            </ul>
+          {%- endwith %}
+        </div>
+      {%- endwith %}
+    </div>
+    #}
+  </div>
+</section>

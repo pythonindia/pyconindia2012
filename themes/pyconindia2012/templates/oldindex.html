@@ -1,0 +1,391 @@
+{% from "baseframe/components.html" import networkbar with context -%}
+{% extends 'eventframe.html' %}
+
+{% block title %}{{ website.title }}{% endblock %}
+{% block description %}Magic with Big Data{% endblock %}
+
+{% block headerbox %}
+<header class="header">
+  {{ networkbar(siteid='events', login=true, baseclass='hg-dark') }}
+  <div class="container">
+    <div class="row">
+      <div class="span6">
+        &nbsp;
+      </div>
+      <div class="span6 banner">
+        <hgroup>
+          <h1 class="primary"><span class="h1-the">The</span> <span class="h1-fifth">Fifth</span> <span class="h1-elephant">Elephant</span></h1>
+          <h2>27 &amp; 28 July 2012</h2>
+          <h3>Nimhans Convention Centre, Bangalore</h3>
+        </hgroup>
+        <a class="btn btn-register" href="http://fifthelephant.doattend.com/"><big><strong>Buy Tickets</strong></big><br><del>Rs 5000</del> Rs 2500</a>
+      </div>
+    </div>
+  </div>
+  <div class="navbar">
+    <div class="container">
+      <ul class="nav">
+        <li><a href="#about">About</a></li>
+        <li><a href="#sponsors">Sponsors</a></li>
+        <li class="spacer"><a href="#schedule">Programme</a></li>
+        <li><a href="#venue">Venue</a></li>
+        <li><a href="#credits">Credits</a></li>
+        <li class="register"><a href="http://fifthelephant.doattend.com/">Register</a></li>
+      </ul>
+    </div><!-- /container -->
+  </div><!-- /navbar -->
+</header>
+{% endblock %}
+
+{% block main %}
+
+<section id="about" class="section">
+  <div class="container">
+    <div class="row">
+
+      <div class="description secondary span3">
+        <h3>Big Data</h3>
+        <p> A perfect storm of commodity hardware, cloud infrastructure and open source software has made reams of data accessible to companies large and small. Explore the <b>volume</b>, <b>velocity</b> and <b>variety</b> of data processing possible today.</p>
+      </div><!-- span3 -->
+      <div class="description secondary span3">
+        <h3>Mathematics</h3>
+	<p>Lies, damned lies and statistics. Sounds familiar? The truth in the data emerges from <b>intelligent application of modeling techniques</b>. Yet, how many of us really understand the coefficients in our regression analyses? Find out.</p>
+      </div><!-- span3 -->
+      <div class="description secondary span3">
+        <h3>Art</h3>
+	<p>Reality is complex and multi-faceted. "What this means is that we shouldn't abbreviate the truth but rather get <b>a new method of presentation</b>," to borrow from Tufte himself. Learn to capture hearts and minds with a new paradigm of narrative design.</p>
+      </div><!-- span3 -->
+      <div class="description secondary span3">
+        <h3>Industry and Business</h3>
+	<p>Industries like finance, media, technology, retail and healthcare consume and produce astronomical volumes of data. Hear their stories, challenges and opportunities, and share your own. <b>Surrender to serendipity.</b></p>
+      </div><!-- span3 -->
+    </div><!-- /row -->
+    <hr class="divider">
+  </div><!-- /container -->
+</section><!-- /about -->
+
+
+<section id="sponsors" class="section">
+  <div class="container">
+    <h2>Sponsors</h2>
+    <div class="row">
+      <article class="open sponsor-platinum sponsor span6">
+        <p class="logo"><img alt="Become a Sponsor" src="http://placehold.it/430x200/E3E3E3/666&amp;text=Your+Logo+Here"></p>
+      </article>
+      <article class="open empty sponsor-platinum sponsor span6">
+        <p class="logo"></p>
+      </article>
+
+
+      <article class="open sponsor-gold sponsor span3">
+        <p class="logo"><img alt="Become a Sponsor" src="http://placehold.it/192x150/E3E3E3/666&amp;text=Your+Logo"></p>
+      </article>
+      <article class="open empty sponsor-gold sponsor span3">
+        <p class="logo"></p>
+      </article>
+      <article class="open empty sponsor-gold sponsor span3">
+        <p class="logo"></p>
+      </article>
+      <article class="open empty sponsor-gold sponsor span3">
+        <p class="logo"></p>
+      </article>
+
+
+      <article class="open sponsor-silver sponsor span2">
+        <p class="logo"><img alt="Become a Sponsor" src="http://placehold.it/90x100/E3E3E3/666&amp;text=You"></p>
+      </article>
+      <article class="open empty sponsor-silver sponsor span2">
+        <p class="logo"></p>
+      </article>
+      <article class="open empty sponsor-silver sponsor span2">
+        <p class="logo"></p>
+      </article>
+      <article class="open empty sponsor-silver sponsor span2">
+        <p class="logo"></p>
+      </article>
+      <article class="open empty sponsor-silver sponsor span2">
+        <p class="logo"></p>
+      </article>
+      <article class="open empty sponsor-silver sponsor span2">
+        <p class="logo"></p>
+      </article>
+
+
+      <article class="open sponsor-bronze sponsor span2">
+        <p class="logo"><img alt="Become a Sponsor" src="http://placehold.it/90x100/E3E3E3/666&amp;text=You"></p>
+      </article>
+      <article class="open empty sponsor-bronze sponsor span2">
+        <p class="logo"></p>
+      </article>
+      <article class="open empty sponsor-bronze sponsor span2">
+        <p class="logo"></p>
+      </article>
+      <article class="open empty sponsor-bronze sponsor span2">
+        <p class="logo"></p>
+      </article>
+      <article class="open empty sponsor-bronze sponsor span2">
+        <p class="logo"></p>
+      </article>
+      <article class="open empty sponsor-bronze sponsor span2">
+        <p class="logo"></p>
+      </article>
+
+
+      <article class="open sponsor-community sponsor span2">
+        <p class="logo"><img alt="Become a Sponsor" src="http://placehold.it/90x50/E3E3E3/666&amp;text=You"></p>
+      </article>
+      <article class="open empty sponsor-community sponsor span2">
+        <p class="logo"></p>
+      </article>
+      <article class="open empty sponsor-community sponsor span2">
+        <p class="logo"></p>
+      </article>
+      <article class="open empty sponsor-community sponsor span2">
+        <p class="logo"></p>
+      </article>
+      <article class="open empty sponsor-community sponsor span2">
+        <p class="logo"></p>
+      </article>
+      <article class="open empty sponsor-community sponsor span2">
+        <p class="logo"></p>
+      </article>
+    </div><!-- /row -->
+    <hr class="divider">
+  </div><!-- /container -->
+</section><!-- /sponsors -->
+
+
+<section id="schedule" class="section">
+  <div class="container">
+    <h2>Programme</h2>
+    <div class="row">
+      <div class="span8">
+        &nbsp;
+      </div>
+      <div class="span4">
+        <div class="funnel legible">
+          <p><a class="btn btn-primary legible" href="http://funnel.hasgeek.com/5el/">Vote <i>or</i><br>Propose a Session</a></p>
+          <p>HasGeek events are community driven. You are invited to submit a session proposal, and you get to influence the proposals that make it to the schedule by voting them up or down in <a href="http://funnel.hasgeek.com/5el/">the funnel</a>.</p>
+          <h4>Submissions close 30<sup>th</sup> June</h4>
+        </div><!-- /funnel -->
+        <h3>Previously at HasGeek</h3>
+        <article class="session-video clearfix">
+          <a href="http://www.youtube.com/watch?v=7ixB2NVbCpI">
+            <p class="thumbnail span2"><img alt="Thumbnail" src="http://img.youtube.com/vi/7ixB2NVbCpI/mqdefault.jpg"></p>
+            <h4>Data Visualisation in JavaScript</h4>
+          </a>
+          <h5>S. Anand</h5>
+        </article>
+        <article class="session-video clearfix">
+          <a href="http://www.youtube.com/watch?v=0Ot0PtBL1q8">
+            <p class="thumbnail span2"><img alt="Thumbnail" src="http://img.youtube.com/vi/0Ot0PtBL1q8/mqdefault.jpg"></p>
+            <h4>The Awesome Contracts project</h4>
+          </a>
+          <h5>Vivek Durai</h5>
+        </article>
+      </div><!-- /span -->
+    </div><!-- /row for preview videos -->
+
+{#
+    <div class="schedule">
+      <table class="table all-tracks">
+        <colgroup class="time"></colgroup>
+        <colgroup class="track track-1"></colgroup>
+        <colgroup class="track track-2"></colgroup>
+        <colgroup class="track track-3"></colgroup>
+        <colgroup class="track track-4"></colgroup>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Room P1 (Stories)</th>
+            <th>Room P2 (Process)</th>
+            <th>Room T1 (Browsers)</th>
+            <th>Room T2 (Tools)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in schedule -%}
+            <tr>
+              <td>{{ row[0] }}</td>
+              {% if row|length == 2 -%}
+                <td colspan="4">{{ row[1] }}</td>
+              {%- else -%}
+                {% for col in row[1:] -%}
+                  {% if col == 0 %}
+                    <td>(open)</td>
+                  {%- else -%}
+                    {%- set proposal = proposals[col] %}
+                    <td>
+                      <h4><a href="{{ proposal['url'] }}">{{ proposal['title'] }}</a></h4>
+                      <p>{{ proposal['speaker'] }}</p>
+                    </td>
+                  {%- endif %}
+                {%- endfor %}
+              {%- endif %}
+            </tr>
+          {%- endfor %}
+        </tbody>
+      </table>
+
+      {% for sub_table in [[("Room P1 (Stories)", 1), ("Room P2 (Process)", 2)], [("Room T1 (Browsers)", 3), ("Room T2 (Tools)", 4)]] -%}
+        <table class="table double-track">
+          <colgroup class="time"></colgroup>
+          <colgroup class="track track-1"></colgroup>
+          <colgroup class="track track-2"></colgroup>
+          <thead>
+            <tr>
+              <th>Time</th>
+              {% for track, track_index in sub_table -%}
+                <th>{{ track }}</th>
+              {%- endfor %}
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in schedule -%}
+              <tr>
+                <td>{{ row[0] }}</td>
+                {% if row|length == 2 -%}
+                  <td colspan="2">{{ row[1] }}</td>
+                {%- else -%}
+                  {% for track, track_index in sub_table -%}
+                  {%- set col = row[track_index] %}
+                    {% if col == 0 %}
+                      <td>(open)</td>
+                    {%- else -%}
+                      {%- set proposal = proposals[col] %}
+                      <td>
+                        <h4><a href="{{ proposal['url'] }}">{{ proposal['title'] }}</a></h4>
+                        <p>{{ proposal['speaker'] }}</p>
+                      </td>
+                    {%- endif %}
+                  {%- endfor %}
+                {%- endif %}
+              </tr>
+            {%- endfor %}
+          </tbody>
+        </table>
+      {%- endfor %}
+
+    </div><!-- /schedule -->
+#}
+    <hr class="divider">
+  </div><!-- /container -->
+</section><!-- /program -->
+
+
+<section id="venue" class="section">
+  <h2>Venue</h2>
+  <div class="spread">
+
+    <div class="container">
+
+      <div class="row">
+        <div id="map" class="map"></div>
+        <div class="details clearfix span5 pull-right">
+          <h3 class="large">Nimhans Convention Centre</h3>
+          <p class="description"><strong>Dairy Circle</strong> Bangalore</p>
+
+          <div class="directions">
+            <h3>Getting There</h3>
+            <p class="legible">The Nimhans Convention Centre is Bangalore's best known venue for large tech events. The venue is on Marigowda Road, past the main Nimhans campus when you approach from Dairy Circle.</p>
+
+            <p class="legible">If you are approaching from Lalbagh, drive up to Dairy Circle for a U-turn under the flyover. The campus has sufficient parking space.</p>
+            <p><a href="http://goo.gl/maps/PvXY">View location in Google Maps</a></p>
+          </div><!-- /directions -->
+
+          <div class="timing">
+            <h3>When</h3>
+            <p class="legible">
+              27<sup>th</sup> &amp; 28<sup>th</sup> July 2012<br>
+              9:00 am to 6:00 pm
+            </p>
+          </div><!-- /timing -->
+        </div><!-- /details -->
+      </div><!-- /row -->
+    </div><!-- /container -->
+  </div><!-- /spread -->
+  <hr class="divider">
+</section><!-- /venue -->
+
+
+<section class="credits section">
+  <div id="credits" class="container">
+    <div class="row">
+      <div class="span8 description legible pull-right">
+        <h3 class="hasgeek"><a href="http://hasgeek.com/">HasGeek</a></h3>
+        <p><strong>HasGeek is a developer-led initiative</strong>, and has been un-organising the unconference scene since 2010. <a href="http://hasgeek.com">HasGeek</a> is an attempt to solve the problem of insipid conferences organised around buzzwords by uninterested, soulless corporate entities who pitch them as company training events or as places for companies to pick up hot developers.</p>
+        <p>We are attempting to build a new space,  <strong>a space that is genuinely respectful of the communities</strong> and topics that we choose to engage with. We want to be a space for developers who are as excited as us about technology and the possibilities that it creates, not to be a recruitment fair (though we hope you do find partnership possibilities at our events).</p>
+        <p>We are community-driven — <a href="http://funnel.hasgeek.com/">check out our speaker-selection funnel</a>, where you decide what talks to listen to by voting up or down. There are just a handful of us running the show and are not in it for the money (not there is much left after paying the vendors and logistics providers). We are doing this because this is what we love: bringing a whole bunch of us geeks together, sharing our interests and expertise and hanging out later over $beverageOfChoice.</p>
+      </div>
+      <div class="span4">
+        <h2>Credits</h2>
+        <dl class="movie-credits">
+          <dt>Producer</dt>
+          <dd>Anupama Sharma</dd>
+          <dt>Editor</dt>
+          <dd>Kiran Jonnalagadda</dd>
+          <dt>Website</dt>
+          <dd>Prateek Rungta,<br><a href="http://miranj.in/">Miranj</a><br>Sidharth Kuruvila</dd>
+          <dt>Hosting</dt>
+          <dd><a href="http://e2enetworks.com/">E2E Networks</a></dd>
+          <dt>Tech support</dt>
+          <dd>Kingsly John<br>Praneeth Bodduluri</dd>
+          <dt>Hasgeek</dt>
+          <dd>Kiran Jonnalagadda<br>Zainab Bawa<br>Anupama Sharma<br>Nigel Babu<br>Sajjad Anwar<br>Parag Gupta</dd>
+          <dt>Earth Photo</dt>
+          <dd>Blue Marble,<br><a href="http://www.flickr.com/photos/gsfc/4392965590/">NASA</a></dd>
+          <dt>Supported By</dt>
+          <dd><a href="http://www.cis-india.org/">The Centre for Internet and Society</a></dd>
+        </dl>
+      </div><!-- /span -->
+    </div>
+  </div>
+</section><!-- /credits -->
+
+{% endblock %}
+
+{% block footerscripts %}
+<script type="text/javascript">
+  $(function() {
+    var map = new L.Map('map');
+    var cloudmadeUrl = 'http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
+        subDomains = ['otile1','otile2','otile3','otile4'],
+        cloudmadeAttrib = '<a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>, <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC-BY-SA</a>';
+        var cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18, attribution: cloudmadeAttrib, subdomains: subDomains});
+
+        var venue = new L.LatLng(12.943104, 77.596865); // geographical point (longitude and latitude)
+        var center = new L.LatLng(12.943104, 77.616);
+        var mobile_center = new L.LatLng(12.943104, 77.596865);
+        map.setView(center, 14).addLayer(cloudmade);
+        if (map.getSize().x < 768) { map.setView(venue,14); } // on smaller screen where map takes full-width
+
+        var venue_marker = new L.Marker(venue);
+        map.addLayer(venue_marker);
+        venue_marker.bindPopup('Nimhans Convention Centre').openPopup();
+        map.scrollWheelZoom.disable();
+        map.doubleClickZoom.disable();
+
+        map.on('zoomend', onZoomend);
+        function onZoomend(){ map.setView(venue, map.getZoom()); };
+  });
+</script>
+<script type="text/javascript">
+  $(function() {
+    $(".sponsor-box").on('shown', function() {
+      if (typeof _gaq != 'undefined') {
+        _gaq.push(['_trackPageview', "/2012/#" + $(this).attr('id')]);
+      };
+    });
+    $(".sponsor-box").on('hidden', function() {
+      if (typeof _gaq != 'undefined') {
+        _gaq.push(['_trackPageview', "/2012/#"]);
+      };
+    });
+    $(".sponsor-exit").click(function() {
+      if (typeof _gaq != 'undefined') {
+        _gaq.push(['_trackPageview', "/out/" + $(this).attr('href')]);
+      };
+    });
+  });
+</script>
+{% endblock %}3

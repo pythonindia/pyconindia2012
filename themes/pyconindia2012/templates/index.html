@@ -1,0 +1,138 @@
+{% from theme("inc/map_script.html") import mapscript -%}
+{% extends theme("layout.html") %}
+
+{% block titletags -%}
+  <title>{% block title %}{{ website.title }}{% endblock %}</title>
+  <meta name="DC.title" content="{{ website.title }}"/>
+{%- endblock %}
+{% block description %}{{ node.description }}{% endblock %}
+
+{% block headerbox %}
+<header class="header">
+  <div class="container masthead-container2">
+    <div id="masthead2">
+      <div id="banner">
+
+        <h1 style="font-size: 3.0em; line-height: 1.0em; padding: 10px;">PyCon India 2012</h1>
+
+        <h2 style="font-size: 1.5em; padding: 0px;">28-30 September 2012</h2>
+        <h2 style="font-size: 1.5em; padding: 0px;"><em>Dharmaram Vidya Kshetram</em>, Bangalore</h2>
+        <!--
+        <a class="btn btn-success btn-wide" href="http://pyconindia2012.doattend.com/"><big><strong>Buy Tickets</strong></big><br><del>Rs 5000</del> Rs 2500</a>
+        -->
+      </div>
+    </div>
+  </div>
+  <div class="main-navbar">
+    <div class="container">
+      <ul class="nav" id="main-nav">
+        <li><a href="#about">About</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#talks">Talks</a></li>
+        <li><a href="#sponsors">Sponsors</a></li>
+        <li><a href="#venue">Venue</a></li>
+        <li class="register"><a href="http://pyconindia2012.doattend.com/">Register</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block main %}
+{% include theme("inc/about.html") %}
+{% include theme("inc/blog.html") %}
+
+{% include theme("inc/proposals.html") %}
+
+{% include theme("inc/sponsors.html") %}
+{% include theme("inc/partners.html") %}
+{% include theme("inc/venue.html") %}
+{% endblock %}
+
+{% block footerscripts %}
+{{ mapscript(getnode('2012', 'venue-map')) }}
+<script type="text/javascript">
+  $(function() {
+    /*
+    $("#main-nav > li:first-child").hover(function() {
+      $("#masthead").addClass('round-bottom-left');
+    }, function() {
+      $("#masthead").removeClass('round-bottom-left');
+    });
+    $("#main-nav > li:last-child").hover(function() {
+      $("#masthead").addClass('round-bottom-right');
+    }, function() {
+      $("#masthead").removeClass('round-bottom-right');
+    });
+    */
+  });
+</script>
+<script type="text/javascript">
+  $(function() {
+    // fixed nav-bar transition code
+    // adapted from twitter bootstrap docs' sub-nav
+    var $win = $(window)
+      , $nav = $('.main-navbar')
+      , $masthead = $('#masthead')
+      , navTop = $nav.length && $nav.offset().top // - 40
+      , isFixed = 0;
+
+    var processScroll = function () {
+      var scrollTop = $win.scrollTop();
+      if (scrollTop >= navTop && !isFixed) {
+        isFixed = 1;
+        $nav.addClass('navbar-fixed-top');
+        $masthead.addClass('navbar-margin');
+      } else if (scrollTop <= navTop && isFixed) {
+        isFixed = 0;
+        $nav.removeClass('navbar-fixed-top');
+        $masthead.removeClass('navbar-margin');
+      };
+    };
+
+    processScroll();
+
+    $win.on('scroll', processScroll);
+
+    // smooth scroll nav links
+    $('a', $nav).smoothScroll({
+        offset: -80
+      , speed: 900
+    });
+
+  });
+</script>
+
+<script type="text/javascript">
+  $(function() {
+    $(".sponsor-box").on('shown', function() {
+      if (typeof _gaq != 'undefined') {
+        _gaq.push(['_trackPageview', "/{{ folder.name }}/#" + $(this).attr('id')]);
+      };
+    });
+    $(".sponsor-box").on('hidden', function() {
+      if (typeof _gaq != 'undefined') {
+        _gaq.push(['_trackPageview', "/{{ folder.name }}/#"]);
+      };
+    });
+    $(".sponsor-exit").click(function() {
+      if (typeof _gaq != 'undefined') {
+        _gaq.push(['_trackPageview', "/out/" + $(this).attr('href')]);
+      };
+    });
+  });
+</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#twitter").getTwitter({
+      userName: "pyconindia",
+      numTweets: 5,
+      loaderText: "Loading tweets...",
+      slideIn: true,
+      showHeading: false,
+      headingText: "Latest Tweets",
+      showProfileLink: false
+    });
+  });
+</script>
+{% endblock %}

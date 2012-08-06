@@ -1,0 +1,71 @@
+{% extends theme("layout.html") %}
+
+{% block title %}{{ node.title }}{% endblock %}
+{% block description %}{{ node.description }}{% endblock %}
+
+{% block content %}
+{{ node.content }}
+<ul id="funnel-filter" class="nav nav-tabs nav-grid">
+  <li class="active"><a data-section="" href="">All</a></li>
+  {% for s in node.sections() %}
+    <li><a data-section="{{ s.name }}" href="">{{ s.title }}</a></li>
+  {% endfor %}
+  <li><a data-confirmed="True" href="">Confirmed Sessions</a></li>
+</ul>
+<ul id="funnel-listing" class="grid container-fluid">
+  <li class="row-fluid header">
+    <div class="span6 funnel-title">Title</div>
+    <div class="span3 funnel-by">By</div>
+    <div class="span1 funnel-date">Date</div>
+    <div class="span1 funnel-comments"><i class="icon-comments"></i></div>
+    <div class="span1 funnel-votes">+1</div>
+  </li>
+  {% for proposal in node.proposals() -%}
+    <li class="row-fluid item" data-section="{{ proposal['section_name'] }}" data-confirmed="{{ proposal['confirmed'] }}">
+      <div class="span6 funnel-title"><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></div>
+      <div class="span3 funnel-by">{{ proposal['proposer'] }}</div>
+      <div class="span1 funnel-date">{{ proposal['submitted']|shortdate }}</div>
+      <div class="span1 funnel-comments">{{ proposal['comments'] }}</div>
+      <div class="span1 funnel-votes">{{ proposal['votes'] }}</div>
+    </li>
+  {%- else -%}
+    <li class="row-fluid">
+      <div class="span12"><em>(No proposals found)</em></div>
+    </li>
+  {%- endfor %}
+</ul>
+
+{% endblock %}
+{% block footerscripts %}
+<script type="text/javascript">
+  $(function() {
+    $("#funnel-filter a[data-section]").click(function(e) {
+      $("#funnel-filter .active").removeClass('active');
+      $(this).closest('li').addClass('active');
+
+      var section = $(this).attr('data-section');
+      if (section == '') {
+        $('#funnel-listing li.item').slideDown('fast');
+      } else {
+        $('#funnel-listing li.item').not('[data-section="' + section + '"]').slideUp('fast');
+        $('#funnel-listing li.item[data-section="' + section + '"]').slideDown('fast');
+      };
+      e.preventDefault();
+    });
+   $("#funnel-filter a[data-confirmed]").click(function(e) {
+      $("#funnel-filter .active").removeClass('active');
+      $(this).closest('li').addClass('active');
+
+      var confirmed = $(this).attr('data-confirmed');
+      if (confirmed == '') {
+        $('#funnel-listing li.item').slideDown('fast');
+      } else {
+        $('#funnel-listing li.item').not('[data-confirmed="' + confirmed + '"]').slideUp('fast');
+        $('#funnel-listing li.item[data-confirmed="' + confirmed + '"]').slideDown('fast');
+      };
+
+      e.preventDefault();
+    });
+  });
+</script>
+{% endblock %}

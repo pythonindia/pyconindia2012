@@ -1,3 +1,6 @@
 [submodule "funnel"]
 	path = funnel
 	url = git://github.com/ipss/funnel.git
+[submodule "eventframe"]
+	path = eventframe
+	url = git://github.com/hasgeek/eventframe

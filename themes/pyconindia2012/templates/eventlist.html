@@ -1,0 +1,39 @@
+{% extends theme("layout.html") %}
+{% from theme("inc/map_script.html") import mapscript with context -%}
+
+{% block title %}{{ node.title }}{% endblock %}
+{% block description %}{{ node.description }}{% endblock %}
+
+{% block headline %}{% endblock %}
+{% block content %}
+<div class="row page-top">
+  <div class="span6">
+    <div class="page-header"><h2>{{ node.title }}</h2></div>
+    {{ node.content }}
+  </div>
+  <div class="span6">
+    {%- if "map" in node.properties %}
+      <div id="map" class="map"></div>
+    {%- endif %}
+    {% if "list" in node.properties %}
+      {%- with eventlist = getnode(path=node.properties['list']) %}{% if eventlist %}
+        {%- with prev = eventlist.prev_to_node(node), next = eventlist.next_to_node(node) %}
+          <ul class="pager">
+            <li class="previous">
+              {% if prev %}<a href="{{ prev.node.url() }}"><i class="icon-hand-left"></i> {{ prev.title }}</a>{% else %}&nbsp;{% endif %}
+            </li>
+            <li class="next">
+              {% if next %}<a href="{{ next.node.url() }}">{{ next.title }} <i class="icon-hand-right"></i></a>{% else %}&nbsp;{% endif %}
+            </li>
+          </ul>
+        {%- endwith %}
+      {%- endif %}{%- endwith %}
+    {%- endif %}
+  </div>
+</div>
+{% endblock %}
+{% block footerscripts %}
+  {% with mapnode = getnode(path=node.properties.get('map')), mapmarker = node.properties.get('mapmarker') %}{% if mapnode %}
+    {{ mapscript(mapnode, mapmarker) }}
+  {%- endif %}{%- endwith %}
+{% endblock %}

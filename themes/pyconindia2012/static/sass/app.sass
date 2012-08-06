@@ -1,0 +1,499 @@
+@import "compass"
+
+$thick-border-thickness: 6px
+$thick-border-color: black
+$thick-border: $thick-border-thickness solid $thick-border-color
+$thick-border-radius: 4px
+
+$font-size: 16px
+$line-height: 24px
+
+// Height: line-height + padding-top + padding-bottom + margin-bottom
+$navbar-height: 19px + 10px + 11px + 22px
+$navbar-height: 46px
+
+@mixin footer-height($height)
+  #root
+    margin-bottom: -($height + 10px)
+    #root_footer
+      height: $height + 10px
+  footer
+    min-height: $height
+    .footer-inner
+      min-height: $height
+
++footer-height(77px)
+
+
+// @import "metarefresh"
+// @import "responsive"
+
+html, body
+
+body, p
+  font-family: ff-tisa-web-pro, Georgia, serif
+  font-size: $font-size
+  line-height: $line-height
+  margin-bottom: $line-height / 2
+
+.leaflet-popup-content
+  font-family: ff-tisa-web-pro, Georgia, serif
+  font-size: $font-size
+  line-height: $line-height
+  font-weight: bold
+
+ul, ol
+  margin-bottom: $line-height / 2
+
+li
+  line-height: $line-height
+  margin-bottom: 0
+
+small
+  font-size: smaller
+
+.description p
+  text-align: center
+  font-size: 25px
+  line-height: 36px
+  font-style: italic
+  color: black
+  margin-bottom: $line-height * 1.5
+
+h2, h3
+  font-family: ff-tisa-web-pro, Georgia, serif
+  color: black
+  margin-top: $line-height
+
+.page-header h2
+  font-family: bree-serif, Georgia, serif
+  font-weight: normal
+  margin-top: 0
+
+.page-top
+  margin-top: $line-height
+
+h2
+  font-size: 30px
+  line-height: $line-height * 2
+
+h3
+  font-size: 25px
+  line-height: $line-height * 2
+
+h4, h5, h6
+  line-height: $line-height
+
+h1 small, h2 small, h3 small
+  line-height: $line-height
+
+.blog h3
+  line-height: $line-height * 1.5
+  font-weight: normal
+  font-family: bree-serif, Georgia, serif
+  margin-top: 26px
+
+  &:first-child
+    margin-top: 0
+
+  a
+    color: inherit
+    text-decoration: none
+    border-bottom: $thick-border-thickness solid transparent
+    +border-bottom-left-radius($thick-border-radius)
+    +border-bottom-right-radius($thick-border-radius)
+
+    &:after
+      content: "\0000a0»"
+      color: transparent
+
+    &:hover
+      color: inherit
+      border-bottom: $thick-border
+
+      &:after
+        color: inherit
+
+.author
+  text-align: right
+  font-style: italic
+
+  &:before
+    content: "— "
+
+ul.twitter_update_list
+  list-style: none
+  margin-left: 0
+
+.twitter_id
+  font-weight: bold
+
+.section-subheader
+  h2, h3
+    margin-top: 0
+
+#masthead, #masthead-short
+  margin-top: 31px
+  +box-sizing(border-box)
+  border: $thick-border
+  +border-top-left-radius($thick-border-radius)
+  +border-top-right-radius($thick-border-radius)
+  position: relative
+
+#masthead
+  background: image-url("2012/masthead-wide.jpg") no-repeat left top
+  height: +image-height("2012/masthead-wide.jpg") + ($thick-border-thickness * 2)
+
+#masthead-short
+  background: image-url("2012/masthead-short.jpg") no-repeat left top
+  height: +image-height("2012/masthead-short.jpg") + ($thick-border-thickness * 2)
+
+  h1
+    position: absolute
+    top: 25px
+    left: 425px
+    bottom: 25px
+    width: 450px
+    padding: 0
+    margin: 0
+    text-align: center
+    font-size: 80px
+    line-height: 1
+
+#banner
+  +box-sizing(border-box)
+  border: $thick-border
+  +border-radius($thick-border-radius)
+  background: white
+  background: rgba(255, 255, 255, 0.9)
+  // background: rgba(255, 255, 255, 0.40)
+  // border: 1px solid rgba(0, 0, 0, 0.5)
+  position: absolute
+  top: 25px
+  right: 25px
+  bottom: 25px
+  width: 450px
+  padding: 10px
+  text-align: center
+  // +box-shadow(0 2px 6px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 10px rgba(255, 255, 255, 0.1), inset 0 10px 20px rgba(255, 255, 255, 0.3), inset 0 -15px 30px rgba(0, 0, 0, 0.3))
+
+  h1
+    font-size: 80px
+    line-height: 1
+    text-shadow: white 0 1px 10px
+
+  h2
+    margin-top: 0
+    font-size: 25px
+    line-height: $line-height * 2
+  h3
+    margin-top: 0
+    font-size: 19px
+    line-height: $line-height
+
+h1
+  font-family: bree-serif, Georgia, serif
+  font-weight: normal
+  color: black
+
+  .h1-the
+    font-size: 90%
+    // color: #df5e0e
+  .h1-fifth
+    // color: #f0a40c
+  .h1-elephant
+    // color: #816894
+
+.section
+  margin: 0
+  margin-top: $line-height * 2
+
+  h2
+    font-family: bree-serif, Georgia, serif
+    font-size: 40px
+    font-weight: normal
+    color: black
+
+.section-header
+  text-align: center
+  margin-bottom: 20px
+
+  h2
+    border-bottom: $thick-border
+    padding: 0 30px
+    +border-bottom-left-radius($thick-border-radius)
+    +border-bottom-right-radius($thick-border-radius)
+    +inline-block
+
+// .section
+//   margin: 0
+//
+//   h2
+//     font-family: bree-serif, Georgia, serif
+//     font-weight: normal
+//     font-size: 4em
+//     line-height: 1.2
+//     text-align: center
+//     color: black
+//     text-shadow: white 0px 1px 0px, #999 0px -1px 0px
+//
+//     &:before
+//       +inline-block
+//       // +replace-text-with-dimensions('2012/leaf-top-left.png')
+//       +replace-text-with-dimensions('2012/leaf-bottom-left.png')
+//       content: ""
+//       margin-right: 20px
+//
+//     &:after
+//       +inline-block
+//       // +replace-text-with-dimensions('2012/leaf-top-right.png')
+//       +replace-text-with-dimensions('2012/leaf-bottom-right.png')
+//       content: ""
+//       margin-left: 20px
+//
+//   h2.left
+//     text-align: left
+//     &:before
+//       display: none
+//
+//   h2.right
+//     text-align: right
+//     &:after
+//       display: none
+
+.btn-wide
+  width: 70%
+  margin: 2em auto 1em
+  display: block
+  line-height: 1.5
+  padding: 0.5em 0 0.75em
+  max-width: 23em
+  font-size: $font-size
+
+.navbar-margin
+  margin-bottom: $navbar-height
+
+// Navigation bar
+.main-navbar .nav
+  float: none
+  +box-sizing(border-box)
+  +display-box
+  margin-right: 0
+  margin-bottom: 0
+  width: 100%
+  background-color: black
+  border-bottom: $thick-border
+  border-left: $thick-border
+  border-right: $thick-border
+  +border-bottom-left-radius($thick-border-radius)
+  +border-bottom-right-radius($thick-border-radius)
+
+  & > li
+    +inline-block
+    float: none
+    font-size: 20px
+    margin-bottom: 0
+    // background-color: black
+    +display-box
+    +box-flex(1)
+    +box-pack(center)
+    +transition-property("color, background-color")
+    +transition-duration(0.2s)
+
+    & > a
+      display: block
+      text-align: center
+      +box-sizing(border-box)
+      width: 100%
+      color: white
+      padding: 10px 10px 11px
+      line-height: 19px
+      text-decoration: none
+      +transition-property("color, background-color")
+      +transition-duration(0.2s)
+
+    &:hover, &:hover > a
+      color: black
+      background-color: #b3a797
+      text-decoration: none
+      +transition-property("color, background-color")
+      +transition-duration(0.2s)
+
+.navbar-fixed-top .nav
+  & > .register, & > .register a
+    color: yellow
+
+.box
+  +box-sizing(border-box)
+  border: $thick-border
+  +border-radius($thick-border-radius)
+  padding: $line-height - $thick-border-thickness
+
+.box-tight
+  padding: 0
+
+.pager
+  font-size: 18px
+  line-height: $line-height
+
+  .previous
+    text-align: left
+  .next
+    text-align: right
+
+// About
+#about
+  margin-top: 24px
+
+#about h3
+  text-align: center
+  font-family: bree-serif, Georgia, serif
+  font-size: 30px
+  font-weight: normal
+  color: black
+  margin-bottom: 20px
+  margin-top: 0
+  border-bottom: $thick-border
+  +border-bottom-left-radius($thick-border-radius)
+  +border-bottom-right-radius($thick-border-radius)
+
+.sharp-bottom-left
+  +border-bottom-left-radius(0 !important)
+
+.sharp-bottom-right
+  +border-bottom-right-radius(0 !important)
+
+.round-bottom-left
+  +border-bottom-left-radius($thick-border-radius !important)
+
+.round-bottom-right
+  +border-bottom-right-radius($thick-border-radius !important)
+
+// Sponsors
+.sponsor
+  padding: 1em
+  margin-bottom: 2.5em
+  background: white
+  +box-sizing(border-box)
+  position: relative
+  // +box-shadow(1px 1px 2px #BBB)
+  border-bottom: $thick-border
+  +border-bottom-left-radius($thick-border-radius)
+  +border-bottom-right-radius($thick-border-radius)
+
+  &:after
+    font-size: 10px
+    position: absolute
+    margin-top: 0.5em
+    top: 100%
+    right: 0
+    font-weight: 500
+    text-transform: uppercase
+    letter-spacing: 0.1em
+    // color: #BBB
+
+  &.open
+    // background: #E3E3E3
+    // border: $thick-border
+    // +border-radius($thick-border-radius)
+    border-color: #E3E3E3
+    // +box-shadow(none)
+
+    &:after
+      color: #e3e3e3
+
+  &.empty
+    // background: rgba(200,200,200,0.2)
+    // +box-shadow(inset 1px 1px 1px #BBB)
+    border-color: #f4f4f4
+
+    &:after
+      color: #f4f4f4
+
+  .logo
+    text-align: center
+    vertical-align: middle
+    margin: 0
+    img
+      max-height: 100%
+      width: auto
+      vertical-align: middle
+
+.sponsor-platinum .logo
+  height: 250px
+  line-height: 250px
+.sponsor-gold .logo
+  height: 150px
+  line-height: 150px
+.sponsor-silver .logo
+  height: 100px
+  line-height: 100px
+.sponsor-bronze .logo
+  height: 75px
+  line-height: 75px
+.sponsor-community .logo
+  height: 50px
+  line-height: 50px
+
+.sponsor-partner .logo
+  height: 100px
+  line-height: 100px
+
+
+.sponsor-platinum:after
+  content: "Platinum"
+.sponsor-gold:after
+  content: "Gold"
+.sponsor-silver:after
+  content: "Silver"
+.sponsor-bronze:after
+  content: "Bronze"
+.sponsor-community:after
+  content: "Community"
+
+
+#venue h3
+  margin-top: -8px
+
+.map-box
+  position: relative
+.map
+  border: $thick-border
+  +border-radius($thick-border-radius)
+  +box-sizing(border-box)
+  // position: absolute
+  // left: 0
+  // top: 0
+  // bottom: 0
+  width: 100%
+  height: 400px
+  overflow: hidden
+  margin: 0 0 $line-height 0
+  padding: 0
+
+.nav.nav-grid
+  margin-top: $line-height * 1.5
+
+.hasgeek
+  +replace-text-with-dimensions('2012/hasgeek.png')
+
+.leaflet-popup-content-wrapper
+  +border-radius(8px)
+
+.leaflet-popup-content
+  margin: 12px 25px 12px 15px
+
+.tooltip
+  font-weight: bold
+  font-size: 14px
+
+footer .footer-inner
+  background: none
+
+.footer-bar
+  border-bottom: $thick-border
+  +border-bottom-left-radius($thick-border-radius)
+  +border-bottom-right-radius($thick-border-radius)
+  margin-bottom: $line-height / 2
+
+@import "responsive"
