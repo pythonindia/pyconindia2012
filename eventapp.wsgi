@@ -14,3 +14,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'eventframe'))
 
 environ['ENVIRONMENT'] = 'production'
 from eventframe import eventapp as application
+
+from eventframe.models import db
+db.create_all(app=application)
+

@@ -15,10 +15,10 @@ venv:
 	$(VENV)/bin/pip install -r requirements.txt
 
 bootstrap:
-	wget -O funnel/test.db http://anandology.com/tmp/pyconindia-funnel.db
+	wget -O var/pyconindia-funnel.db http://anandology.com/tmp/pyconindia-funnel.db
+	wget -O var/pyconindia.db http://anandology.com/tmp/pyconindia.db
 
 copy:
-	rsync -av overwrites/* .
 	cp funnel-settings.py funnel/settings.py
 	mkdir -p var/eventframe-instance
 	cp eventframe-settings.py var/eventframe-instance/settings.py

@@ -13,3 +13,4 @@ simplejson
 pytz
 uwsgi
 blinker
+httplib2
