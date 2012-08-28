@@ -15,6 +15,7 @@ venv:
 	$(VENV)/bin/pip install -r requirements.txt
 
 bootstrap:
+	mkdir -p var
 	wget -O var/pyconindia-funnel.db http://anandology.com/tmp/pyconindia-funnel.db
 	wget -O var/pyconindia.db http://anandology.com/tmp/pyconindia.db
 
