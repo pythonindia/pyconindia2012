@@ -29,7 +29,8 @@ body	{
 }
 
 #masthead {
-  background: url('../img/masthead.png') no-repeat left top;
+  background: url('../img/masthead.png') no-repeat top right ;
+  background-color: black;
 }
 
 .main-navbar .nav {
