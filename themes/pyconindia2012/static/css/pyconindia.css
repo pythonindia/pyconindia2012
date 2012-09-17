@@ -141,3 +141,8 @@ h1, h2, h3 {
     margin-bottom: 10px;
     font-size: 0.9em;
 }
+
+#schedule ul.grid > .row-fluid > [class*="span"] {
+    white-space: normal;
+}
+
