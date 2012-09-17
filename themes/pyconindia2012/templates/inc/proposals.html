@@ -1,41 +1,88 @@
-<section id="talks" class="section">
+<section id="schedule" class="section">
   <div class="container">
     <div class="section-header">
-      <h2 class="right">Talks</h2>
+      <h2>Schedule</h2>
     </div>
-    <div>
-    Call For Proposals closed now. Look at the <a href="/2012/funnel/pyconindia2012/">existing proposals</a>.
-    </div>
+    <h3>Tutorials Day - 28 September</h3>
 
-    {#
-    <div class="row">
-      {%- with proposals_blurb = fragment('2012', 'proposals-blurb') %}
-        <div class="span4 box push-right">
-          {{ proposals_blurb.content }}
-          <p><a class="btn btn-success btn-wide" href="{{ url_for('node', folder=folder.name, node='proposals') }}">View session proposals</a></p>
-        </div>
-        <div class="span8">
-          {%- with proposals = getnode('2012', 'proposals').confirmed() %}
-            <ul id="funnel-preview" class="grid container-fluid">
-              <li class="row-fluid header">
-                <div class="span7 funnel-preview-title">{{ proposals_blurb.title }}</div>
-                <div class="span3 funnel-preview-by">By</div>
-              </li>
-              {% for proposal in proposals[:5] -%}
-		<li class="row-fluid item" data-section="{{ proposal['section_name'] }}">
-		  <div class="span7 funnel-preview-title"><a target="_blank" href="{{ proposal['url'] }}" title="{{ proposal['title'] }}">{{ proposal['title'] }}</a></div>
-                  <div class="span3 funnel-preview-by">{{ proposal['proposer'] }}</div>
-                </li>
-              {%- else -%}
-                <li class="row-fluid">
-                  <div class="span12"><em>(No proposals found)</em></div>
-                </li>
-              {%- endfor %}
-            </ul>
-          {%- endwith %}
-        </div>
-      {%- endwith %}
+<ul class="grid schedule container-fluid">
+  <li class="row-fluid item" style="text-align: center">
+    <div class="span2">Room</div>
+    <div class="span2"><b>A1</b></div>
+    <div class="span2"><b>A2</b></div>
+    <div class="span2"><b>A3</b></div>
+    <div class="span2"><b>B1</b></div>
+    <div class="span2"><b>B2</b></div>
+  </li>
+
+  <li class="row-fluid item">
+    <div class="span2">9:00 &mdash; 10:00</div>
+    <div class="span10 keynote">Registrations</div>
+  </li>
+  <li class="row-fluid item">
+    <div class="span2">10:00 &mdash; 13:00</div>
+    <div class="span2">
+      <h4><a href="/2012/funnel/pyconindia2012/69">Building interactive Application with ETS</a></h4>
+      <p>Prabhu Ramachandran</p>
     </div>
-    #}
-  </div>
+    <div class="span2">
+      <h4><a href="/2012/funnel/pyconindia2012/40">Build your own IVR</a></h4>
+      <p>Piyush Aggarwal</p>
+    </div>
+    <div class="span2">
+      <h4><a href="/2012/funnel/pyconindia2012/62">Celery for background task processing and deferred execution</a></h4>
+      <p>Konark Modi</p>
+    </div>
+    <div class="span2">
+      <h4><a href="/2012/funnel/pyconindia2012/26">Django &mdash; Introduction & Demo</a></h4>
+      <p>Sivasubramaniam Arunachalam</p>
+    </div>
+    <div class="span2">
+      <h4><a href="/2012/funnel/pyconindia2012/37">Web development - Code to Deployment</a></h4>
+      <p>A S L Devi</p>
+    </div>
+  </li>
+  <li class="row-fluid item">
+    <div class="span2">13:00 &mdash; 14:00</div>
+    <div class="span10 all-tracks">Lunch Break</div>
+  </li>
+  <li class="row-fluid item">
+    <div class="span2">14:00 &mdash; 17:00</div>
+    <div class="span2">
+      <h4><a href="/2012/funnel/pyconindia2012/37">Solving Puzzles with Python</a></h4>
+      <p>Anand Chitipothu</p>
+    </div>
+    <div class="span2">
+      <h4><a href="/2012/funnel/pyconindia2012/15">Developing Ubuntu apps for fun and profit</a></h4>
+      <p>Javed Khan</p>
+    </div>
+    <div class="span2">
+      <h4><a href="/2012/funnel/pyconindia2012/67">Shake the very fabric of django deployment woes</a></h4>
+      <p>Anuvrat Parashar</p>
+    </div>
+    <div class="span2">
+      <h4><a href="/2012/funnel/pyconindia2012/81">Hands On Beginning Python</a></h4>
+      <p>Jaganadh Gopinadhan</p>
+    </div>
+    <div class="span2">
+      <h4><a href="/2012/funnel/pyconindia2012/55">Simple Linux Cluster With Python and Beanstalkd</a></h4>
+      <p>Rachee Singh</p>
+    </div>
+  </li>
+</ul>
+
+    <h3>Conference Day 1 - 29 September</h3>
+    <ul class="grid schedule container-fluid">
+      <li class="row-fluid item">
+        <div class="span12">Will be announced shortly</div>
+      </li>
+    </ul>
+
+    <h3>Conference Day 2 - 30 September</h3>
+    <ul class="grid schedule container-fluid">
+      <li class="row-fluid item">
+        <div class="span12">Will be announced shortly</div>
+      </li>
+    </ul>
+</div>
 </section>
