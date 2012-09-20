@@ -56,6 +56,9 @@
       <article class="sponsor-silver sponsor span2">
         <p class="logo"><a data-toggle="modal" href="#sponsor-plivo"><img alt="Plivo" src="{{ theme_static('img/2012/sponsors/sponsor-plivo.png') }}"></a></p>
       </article>
+      <article class="sponsor-silver sponsor span2">
+        <p class="logo"><a data-toggle="modal" href="#sponsor-symphonyteleca"><img alt="Symphony Teleca Corporation" src="{{ theme_static('img/2012/sponsors/sponsor-symphonyteleca.png') }}"></a></p>
+      </article>
     </div><!-- /row -->
 
       <div class="modal fade sponsor-box" id="sponsor-agiliq">
@@ -108,6 +111,19 @@
         </div>
         <div class="modal-footer">
           <a href="http://www.plivo.com/" class="btn btn-primary sponsor-exit">Visit Plivo</a>
+          <a data-dismiss="modal" class="btn">Close</a>
+        </div>
+      </div>
+      <div class="modal fade sponsor-box" id="sponsor-symphonyteleca">
+        <div class="modal-header">
+          <a class="close" data-dismiss="modal">&times;</a>
+          <h3>Symphony Teleca Corporation</h3>
+        </div>
+        <div class="modal-body">
+          {{ fragment('2012', 'sponsor-symphonyteleca').content }}
+        </div>
+        <div class="modal-footer">
+          <a href="http://www.symphonyteleca.com/" class="btn btn-primary sponsor-exit">Visit Symphony Teleca</a>
           <a data-dismiss="modal" class="btn">Close</a>
         </div>
       </div>
