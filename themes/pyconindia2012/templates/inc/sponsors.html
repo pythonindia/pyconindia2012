@@ -53,6 +53,9 @@
       <article class="sponsor-silver sponsor span2">
         <p class="logo"><a href="http://www.lexity.com/" title="Lexity Labs"><img alt="Lexity Labs" src="{{ theme_static('img/2012/sponsors/sponsor-lexity.png') }}"></a></p>
       </article>
+      <article class="sponsor-plivo sponsor span2">
+        <p class="logo"><a data-toggle="modal" href="#sponsor-plivo"><img alt="Plivo" src="{{ theme_static('img/2012/sponsors/sponsor-plivo.png') }}"></a></p>
+      </article>
     </div><!-- /row -->
 
       <div class="modal fade sponsor-box" id="sponsor-agiliq">
@@ -92,6 +95,19 @@
         </div>
         <div class="modal-footer">
           <a href="http://www.ideadevice.com/" class="btn btn-primary sponsor-exit">Visit Idea Device</a>
+          <a data-dismiss="modal" class="btn">Close</a>
+        </div>
+      </div>
+      <div class="modal fade sponsor-box" id="sponsor-plivo">
+        <div class="modal-header">
+          <a class="close" data-dismiss="modal">&times;</a>
+          <h3>Plivo</h3>
+        </div>
+        <div class="modal-body">
+          {{ fragment('2012', 'sponsor-plivo').content }}
+        </div>
+        <div class="modal-footer">
+          <a href="http://www.plivo.com/" class="btn btn-primary sponsor-exit">Visit Plivo</a>
           <a data-dismiss="modal" class="btn">Close</a>
         </div>
       </div>
