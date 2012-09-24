@@ -1,0 +1,12 @@
+# Format: start-end list-of-talks-separated-by-comma
+# Prefix with * for all-track sessions
+09:00-09:30 *Registrations
+09:30-10:30 *Keynote (in Hall)
+11:00-12:00 74,77,71,39
+12:00-13:00 27,64,49,14
+13:00-14:00 *Lunch Break
+14:00-15:00 48,28,29,35
+15:00-16:00 57,36,13,5
+16:00-16:30 *Tea Beak
+16:30-17:30 33,41,12,42
+17:30-18:30 *IPSS AGM
