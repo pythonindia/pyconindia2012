@@ -1,6 +1,7 @@
 # Format: start-end list-of-talks-separated-by-comma
 # Prefix with * for all-track sessions
-09:00-09:30 *Registrations
+09:00-09:20 *Registrations
+09:20-09:30 *Introduction
 09:30-10:30 *Keynote (in Hall)
 11:00-12:00 30,70,32,56
 12:00-13:00 19,61,7,18
