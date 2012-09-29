@@ -1,8 +1,8 @@
 # Format: start-end list-of-talks-separated-by-comma
 # Prefix with * for all-track sessions
 09:00-09:30 *Registrations
-09:30-10:30 *Keynote (in Hall)
-11:00-12:00 74,77,71,39
+09:30-10:30 *Keynote by Jacob Kaplan-Moss (in Hall)
+11:00-12:00 46,77,71,39
 12:00-13:00 27,64,49,14
 13:00-14:00 *Lunch Break
 14:00-15:00 48,28,29,35
