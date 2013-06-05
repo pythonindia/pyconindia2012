@@ -1,0 +1,39 @@
+<section id="about" class="section">
+  <div class="container">
+    <div class="description">{{ node.content }}</div>
+
+    <div class="row">
+        <div class="span4">
+          <h3>Participate</h3>
+          <p>Get the tickets now!</p>
+           <p>Look at the <a href="/funnel/2013/">existing proposals</a>.</p>
+
+          <p><a class="btn-warning btn-large" target=_blank href="http://pyconindia2013.doattend.com/">Book now</a></p>
+        </div><!--/span-->
+         <div class="span4">
+          <h3>Speak</h3>
+          <p>Do you have what it takes to speak to fellow Pythonistas?</p>
+
+          <p><a class="btn-warning btn-large" href="/funnel/2013/" id="propose-session">Propose a Session</a></p>
+        </div><!--/span-->
+        <div class="span4">
+          <h3>Sponsor</h3>
+          <p>Would you or your employer like to sponsor PyCon India? </p>
+          <p><a class="btn-warning btn-large" target=_blank href="mailto:contact@in.pycon.org" target="_blank">Get in Touch</a></p>
+        </div><!--/span-->
+    </div><!--/row-->
+
+    {#
+    <div class="row">
+      {% for name in ['about-infrastructure', 'about-analytics', 'about-visualization', 'about-business'] %}
+        <div class="span3">
+          {% with p = fragment('2012', name) %}
+            <h3>{{ p.title }}</h3>
+            {{ p.content }}
+          {% endwith %}
+        </div><!-- span3 -->
+      {% endfor %}
+    </div><!-- /row -->
+    #}
+  </div><!-- /container -->
+</section><!-- /about -->

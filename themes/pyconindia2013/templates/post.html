@@ -1,0 +1,34 @@
+{% extends theme("layout.html") %}
+
+{% block title %}{{ node.title }}{% endblock %}
+{% block description %}{{ node.description }}{% endblock %}
+
+{% block headline %}{% endblock %}
+{% block content %}
+<div class="row blog page-top">
+  <div class="span7">
+    <div class="page-header">
+      <h2>{{ self.title() }} <small>{{ node.published_at|longdate }}</small></h2>
+    </div>
+    {{ node.content }}
+    <p class="author">{{ node.user.fullname }}</p>
+  </div>
+  {#
+  <div class="span5 box">
+    <div class="page-header">
+      <h2>Recent posts</h2>
+      {% for post in feed(limit=4) -%}
+        <h3>
+          <a href="{{ url_for('node', folder=post.folder.name, node=post.name) }}">{{ post.title }}</a>
+          <small>{{ post.published_at|longdate }}</small>
+        </h3>
+        {{ post.description }}
+      {%- else -%}
+        <p>(No blog entries have been written so far)</p>
+      {%- endfor %}
+      <h3><a href="/blog/">See all blog posts</a></h3>
+    </div>
+  </div>
+  #}
+</div>
+{% endblock %}

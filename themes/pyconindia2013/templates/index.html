@@ -1,0 +1,184 @@
+{% from theme("inc/map_script.html") import mapscript -%}
+{% extends theme("layout.html") %}
+
+{% block titletags -%}
+  <title>{% block title %}{{ website.title }}{% endblock %}</title>
+  <meta name="DC.title" content="{{ website.title }}"/>
+{%- endblock %}
+{% block description %}{{ node.description }}{% endblock %}
+
+{% block headerbox %}
+<style type="text/css">
+#masthead {
+    background: none;
+    height: auto;
+}
+.banner0 {
+    padding: 20px 50px 20px 20px;
+    border-right: 5px solid #ccc;
+}
+
+.banner {
+    padding-top: 40px;
+}
+.banner div {
+    padding: 10px 0px;
+}
+
+.date {
+    color: #7e2724;
+    font-size: 22px;
+    font-weight: normal;
+    font-family: Tahoma;
+}
+.venue {
+    font-size: 24px;
+    font-weight: normal;
+    color: #464646;
+}
+
+.description p {
+    text-align: left;
+}
+
+</style>
+<header class="header">
+  <div class="container masthead-container">
+    <div id="masthead">
+	<div class="row">
+	    <div class="span6">
+		<div class="banner0">
+		    <img src="{{ theme_static("img/pycon-text.png") }}">
+		</div>
+	    </div>
+	    <div class="span5">
+		<div class="banner">
+		    <div class="date">August 30, 31 &amp; September 1, 2013</div>
+		    <div class="venue">NIMHANS Convention Centre, Bangalore</div>
+		</div>
+	    </div>
+	</div>
+    </div>
+  </div>
+  <div class="main-navbar">
+    <div class="container">
+      <ul class="nav" id="main-nav">
+        <li><a href="#about">About</a></li>
+        <li><a href="#blog">Blog</a></li>
+	{#
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="/2013/faqs">FAQs</a></li>
+	#}
+        <li><a href="#sponsors">Sponsors</a></li>
+        <li><a href="#venue">Venue</a></li>
+        <li class="register"><a href="http://pyconindia2013.doattend.com/">Register</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block main %}
+{% include theme("inc/about.html") %}
+{% include theme("inc/blog.html") %}
+
+{#
+{% include theme("inc/proposals.html") %}
+#}
+
+{% include theme("inc/sponsors.html") %}
+
+{#
+{% include theme("inc/partners.html") %}
+#}
+
+{% include theme("inc/venue.html") %}
+{% endblock %}
+
+{% block footerscripts %}
+{{ mapscript(getnode('2013', 'venue-map')) }}
+<script type="text/javascript">
+  $(function() {
+    /*
+    $("#main-nav > li:first-child").hover(function() {
+      $("#masthead").addClass('round-bottom-left');
+    }, function() {
+      $("#masthead").removeClass('round-bottom-left');
+    });
+    $("#main-nav > li:last-child").hover(function() {
+      $("#masthead").addClass('round-bottom-right');
+    }, function() {
+      $("#masthead").removeClass('round-bottom-right');
+    });
+    */
+  });
+</script>
+<script type="text/javascript">
+  $(function() {
+    // fixed nav-bar transition code
+    // adapted from twitter bootstrap docs' sub-nav
+    var $win = $(window)
+      , $nav = $('.main-navbar')
+      , $masthead = $('#masthead')
+      , navTop = $nav.length && $nav.offset().top // - 40
+      , isFixed = 0;
+
+    var processScroll = function () {
+      var scrollTop = $win.scrollTop();
+      if (scrollTop >= navTop && !isFixed) {
+        isFixed = 1;
+        $nav.addClass('navbar-fixed-top');
+        $masthead.addClass('navbar-margin');
+      } else if (scrollTop <= navTop && isFixed) {
+        isFixed = 0;
+        $nav.removeClass('navbar-fixed-top');
+        $masthead.removeClass('navbar-margin');
+      };
+    };
+
+    processScroll();
+
+    $win.on('scroll', processScroll);
+
+    // smooth scroll nav links
+    $('a', $nav).smoothScroll({
+        offset: -80
+      , speed: 900
+    });
+
+  });
+</script>
+
+<script type="text/javascript">
+  $(function() {
+    $(".sponsor-box").on('shown', function() {
+      if (typeof _gaq != 'undefined') {
+        _gaq.push(['_trackPageview', "/{{ folder.name }}/#" + $(this).attr('id')]);
+      };
+    });
+    $(".sponsor-box").on('hidden', function() {
+      if (typeof _gaq != 'undefined') {
+        _gaq.push(['_trackPageview', "/{{ folder.name }}/#"]);
+      };
+    });
+    $(".sponsor-exit").click(function() {
+      if (typeof _gaq != 'undefined') {
+        _gaq.push(['_trackPageview', "/out/" + $(this).attr('href')]);
+      };
+    });
+  });
+</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#twitter").getTwitter({
+      userName: "pyconindia",
+      numTweets: 5,
+      loaderText: "Loading tweets...",
+      slideIn: true,
+      showHeading: false,
+      headingText: "Latest Tweets",
+      showProfileLink: false
+    });
+  });
+</script>
+{% endblock %}

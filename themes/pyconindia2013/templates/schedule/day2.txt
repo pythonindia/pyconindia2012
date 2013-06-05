@@ -1,0 +1,13 @@
+# Format: start-end list-of-talks-separated-by-comma
+# Prefix with * for all-track sessions
+09:00-09:20 *Registrations
+09:20-09:30 *Introduction
+09:30-10:30 *Keynote by David Mertz (in Hall)
+11:00-12:00 30,70,32,56
+12:00-13:00 19,61,7,18
+13:00-14:00 *Lunch Break
+14:00-15:00 20,72,63,10
+15:00-16:00 78,65,46,53
+16:00-16:30 *Tea Beak
+16:30-17:30 8,16,66,34
+17:30-18:30 17,22,82

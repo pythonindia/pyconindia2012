@@ -1,0 +1,188 @@
+/* ================= */
+/* = Media Queries = */
+/* ================= */
+
+
+
+// Masthead only, for small screens
+@media screen and (max-width: 600px) {
+  #masthead {
+    @include pie-clearfix;
+    height: auto;
+    #banner {
+      position: static;
+      border: 0;
+      border-top: $thick-border;
+      width: 100%;
+      @include border-radius(0);
+      margin-top: 460px;
+      background: #b3a797;
+      h1 {
+        text-shadow: none;
+      }
+    }
+  }
+}
+
+// UP TO LANDSCAPE PHONE
+// ---------------------
+
+@media screen and (max-width: 480px) {
+  #masthead #banner h1 {
+    font-size: 50px;
+  }
+}
+
+
+// LANDSCAPE PHONE TO SMALL DESKTOP & PORTRAIT TABLET
+// --------------------------------------------------
+
+@media screen and (max-width: 767px) {
+  .masthead-container {
+    padding: 0;
+    #masthead, #masthead-short, .main-navbar .nav {
+      margin-top: 0;
+      border-left: 0;
+      border-right: 0;
+      @include border-radius(0);
+    }
+  }
+  #masthead-short {
+    background-position: -70px 0;
+    height: +image-height("2012/masthead-short.jpg") + ($thick-border-thickness * 2) + 76px;
+    h1 {
+      left: 0;
+      top: auto;
+      width: 100%;
+      bottom: 0;
+      padding-top: 10px;
+      font-size: 60px;
+      line-height: 1;
+      border-top: $thick-border;
+      background-color: #b3a797;
+    }
+  }
+  .main-navbar {
+    .container {
+      padding: 0;
+    }
+    .nav {
+      padding: 0 5px;
+      display: block;
+      @include pie-clearfix;
+      @include border-radius(0);
+      & > li {
+          display: block;
+          float: left;
+      }
+    }
+  }
+  .navbar-margin {
+    margin-bottom: 0;
+  }
+  .navbar-fixed-top .nav {
+    & > .register, & > .register a {
+      color: white;
+    }
+  }
+  .section h2 {
+    display: block;
+  }
+  // FIXME: This is ugly. Use generic hide-on-phones, etc classes
+  #funnel-preview .header .funnel-preview-by,
+  #funnel-preview .header .funnel-preview-date {
+    display: none;
+  }
+  #funnel-preview .funnel-preview-by {
+    float: left;
+    &:before {
+        content: "—";
+    }
+    &:after {
+        content: ",\0000a0";
+    }
+  }
+  #funnel-preview .funnel-preview-date {
+    float: left;
+  }
+  .sponsor {
+    margin-top: 1em !important;
+  }
+  .sponsor.empty, .sponsor.open {
+    display: none;
+  }
+  .footer-bar {
+    border-bottom: 0;
+  }
+
+  #funnel-listing {
+    .header {
+      display: none;
+    }
+    .funnel-by {
+      float: left;
+      &:before {
+        content: "—";
+      }
+      &:after {
+        content: ",\0000a0";
+      }
+    }
+    .funnel-date {
+      float: left;
+      &:after {
+        content: ",\0000a0";
+      }
+    }
+    .funnel-comments {
+      display: none;
+    }
+    .funnel-votes {
+      float: left;
+      font-weight: bold;
+    }
+  }
+}
+
+// PORTRAIT TABLET TO DEFAULT DESKTOP
+// ----------------------------------
+
+@media screen and (min-width: 768px) and (max-width: 979px) {
+  #masthead {
+    background-position: -70px 0;
+  }
+  #masthead-short {
+    background-position: -70px 0;
+    h1 {
+      left: 330px;
+      width: 380px;
+      padding-top: 20px;
+    }
+  }
+}
+
+// TABLETS AND BELOW
+// -----------------
+@media screen and (max-width: 979px) {
+  #masthead {
+    background-position: -110px 0;
+  }
+}
+
+// DEFAULT DESKTOP
+// ---------------
+
+@media screen and (min-width: 980px) {
+  #masthead {
+    background-position: -110px 0;
+  }
+}
+
+// LARGE DESKTOP & UP
+// ------------------
+
+@media screen and (min-width: 1200px) {
+  #masthead {
+    background-position: 0 0;
+  }
+}

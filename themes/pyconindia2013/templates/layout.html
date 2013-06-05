@@ -1,0 +1,48 @@
+{% extends "eventframe.html" -%}
+
+{% block favicon %}
+  <link rel="icon" href="{{ theme_static('img/favicon.ico') }}"/>
+{% endblock %}
+
+
+{% block headerbox %}
+<header class="header">
+  <div class="main-navbar">
+    <div class="container">
+      <ul class="nav" id="main-nav">
+        <li><a href="/2013">&larr; Back</a></li>
+        <li><a href="/blog">PyCon India Blog</a></li>
+        <li class="register"><a href="http://pyconindia2013.doattend.com/">Register for the Event</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block baseheadline -%}
+  {% block headline -%}
+    <div class="page-header">
+      <h2>{{ self.title() }}</h2>
+    </div>
+  {%- endblock %}
+{%- endblock %}
+
+{% block basecontent -%}
+  {% block content %}{% endblock %}
+{%- endblock %}
+
+{% block basefooter -%}
+  <footer>
+    <div class="footer-inner">
+      <div class="container">
+        <div class="footer-bar"></div>
+        {% block footer -%}
+          <span>
+            Copyright &copy; 2013 IPSS
+            | Powered by HasGeek's <a href="https://github.com/hasgeek/eventframe">eventframe</a>
+          </span>
+        {%- endblock %}
+      </div>
+    </div>
+  </footer>
+{%- endblock %}
