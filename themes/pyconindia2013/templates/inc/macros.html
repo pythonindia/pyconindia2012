@@ -1,9 +1,9 @@
 {% macro render_sponsor(name) -%}
   {% set node = fragment('2013', name) %}
-  {% set website = node.properties.get("website") %}
-  {% set image_url = node.properties.get("image") %}
-  {% set has_content = node.properties.get("content") != "false" %}
-  {% if has_content %}
+  {% if node %}
+    {% set website = node.properties.get("website") %}
+    {% set image_url = node.properties.get("image") %}
+    {% set has_content = node.properties.get("content") != "false" %}
     <p class="logo"><a data-toggle="modal" href="#{{name}}"><img alt="{{node.title}}" src="{{ image_url }}"></a></p>
     <div class="modal fade sponsor-box" id="{{name}}">
       <div class="modal-header">
@@ -17,7 +17,20 @@
         <a href="{{website}}" class="btn btn-primary sponsor-exit">Visit {{node.title}}</a>
         <a data-dismiss="modal" class="btn">Close</a>
       </div>
-    {% else %}
-      <p class="logo"><a href="{{website}}"><img alt="{{node.title}}" src="{{ image_url }}"></a></p>
-    {% endif %}
+    </div>    
+  {% else %}
+    <p class="logo"><a href="{{website}}"><img alt="{{node.title}}" src="{{ image_url }}"></a></p>
+  {% endif %}
+{%- endmacro %}
+
+{% macro render_sponsor_row(key, prefix, klass) -%}
+  <div class="row">
+    {% set root = getnode("2013", "") %}
+    {% set names = root.properties.get(key) and root.properties.get(key).split(",") or [] %}
+    {% for name in names %}
+      <article class="{{ klass }}">
+        {{ render_sponsor(prefix + name) }}
+      </article>
+    {% endfor %}
+  </div>
 {%- endmacro %}

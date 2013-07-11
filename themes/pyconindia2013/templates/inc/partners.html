@@ -1,22 +1,9 @@
 {% import theme('inc/macros.html') as macros with context  %}
-
 <section id="partners" class="section">
   <div class="container">
     <div class="section-header">
       <h2>Partners</h2>
     </div>
-    <div class="row" style="vertical-align: top">
-      <div class="span12">
-        <div class="row">
-          {% set root = getnode("2013", "") %}
-          {% set partners = root.properties.get("partners") and root.properties.get("partners").split(",") or [] %}
-          {% for name in partners %}
-            <article class="sponsor-partner sponsor span2">
-              {{ macros.render_sponsor("partner-" + name) }}
-            </article>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
+    {{ macros.render_sponsor_row("partners", prefix="partner-", klass="sponsor-partner sponsor span2")}}
   </div>
 </section>
