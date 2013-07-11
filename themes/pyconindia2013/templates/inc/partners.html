@@ -1,43 +1,22 @@
+{% import theme('inc/macros.html') as macros with context  %}
+
 <section id="partners" class="section">
   <div class="container">
     <div class="section-header">
-      <h2>Supported By</h2>
+      <h2>Partners</h2>
     </div>
     <div class="row" style="vertical-align: top">
       <div class="span12">
         <div class="row">
-          <article class="sponsor-partner sponsor span2">
-            <p class="logo"><a data-toggle="modal" href="#partner-hasgeek"><img alt="HasGeek" src="{{ theme_static('img/2012/partners/hasgeek.png') }}"></a></p>
-          </article>
-          <article class="sponsor-partner sponsor span2">
-            <p class="logo"><a href="http://mahiti.org/"><img alt="Mahiti Infotech" src="{{ theme_static('img/2012/partners/mahiti.png') }}"></a></p>
-          </article>
+          {% set root = getnode("2013", "") %}
+          {% set partners = root.properties.get("partners") and root.properties.get("partners").split(",") or [] %}
+          {% for name in partners %}
+            <article class="sponsor-partner sponsor span2">
+              {{ macros.render_sponsor("partner-" + name) }}
+            </article>
+          {% endfor %}
         </div>
       </div>
-      <!--
-      <div class="span6">
-          <div class="section-subheader">
-            <h3>About IPSS</h3>
-          </div>
-          <p>
-            <a href="http://www.ipss.org.in/">Indian Python Software Society</a> is an organization to promote Python in India. IPSS has been conducting PyCon India conference from past 4 years.
-          </p>
-      </div> -->
     </div>
   </div>
-
-  <div class="modal fade sponsor-box" id="partner-hasgeek">
-    <div class="modal-header">
-      <a class="close" data-dismiss="modal">&times;</a>
-      <h3>HasGeek</h3>
-    </div>
-    <div class="modal-body">
-      {{ fragment('2012', 'partner-hasgeek').content }}
-    </div>
-    <div class="modal-footer">
-      <a href="http://okfn.org/" class="btn btn-primary sponsor-exit">Visit HasGeek</a>
-      <a data-dismiss="modal" class="btn">Close</a>
-    </div>
-  </div>
-
 </section>
