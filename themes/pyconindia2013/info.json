@@ -10,7 +10,7 @@
         "assets_css": [
             "js/leaflet/leaflet.css",
             "css/app.css",
-            "css/pyconindia.css"
+            "css/master.css"
         ],
         "assets_js": [
             "js/jquery.smooth-scroll.min.js",

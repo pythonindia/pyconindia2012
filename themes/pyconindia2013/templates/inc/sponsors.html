@@ -1,12 +1,13 @@
 {% from theme('inc/macros.html') import render_sponsor_row with context  %}
 
-<section id="sponsors" class="section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="left">Sponsors</h2>
+  <div class="row-fluid">
+    <div class="span12">
+      <section id="sponsors-list">
+        <h2 ><span>&gt;&gt;&gt;</span>Sponsors</h2>
+        {{ render_sponsor_row("platinum-sponsors", prefix="sponsor-", klass="platinum") }}
+        {{ render_sponsor_row("gold-sponsors", prefix="sponsor-", klass="gold") }}
+        {{ render_sponsor_row("silver-sponsors", prefix="sponsor-", klass="silver") }}
+        <a href="#">Download Sponsorship Prospectus</a>
+      </section>
     </div>
-    {{ render_sponsor_row("platinum-sponsors", prefix="sponsor-", klass="sponsor-platinum sponsor span6") }}
-    {{ render_sponsor_row("gold-sponsors", prefix="sponsor-", klass="sponsor-gold sponsor span3") }}
-    {{ render_sponsor_row("silver-sponsors", prefix="sponsor-", klass="sponsor-silver sponsor span2") }}
-  </div><!-- /container -->
-</section><!-- /sponsors -->
+  </div>

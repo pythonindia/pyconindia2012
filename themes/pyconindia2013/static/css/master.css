@@ -1,0 +1,438 @@
+body{
+    background: #fff url('../img/bg_body.png') repeat-x;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.clearspace{
+    padding: 30px;
+}
+
+.wrapper{
+    width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+nav{
+    background: #C8E0EF;
+    border-bottom: 6px solid #4dbfd9;
+    padding: 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100000;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+nav ul li{
+    display: inline;
+    float: left;
+    padding: 10px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #254f73;
+    font-size: 20px;
+    margin: 0 10px;
+    text-shadow: 0 -1px 0 #fff;
+}
+
+nav ul li:hover{
+    background: #4dbfd9;
+}
+
+nav ul li:hover a{
+    text-shadow: none;
+}
+
+nav ul li a:hover{
+    text-decoration: none;
+    text-shadow: none;
+}
+
+#register-link{
+    background: #F9BE06;
+}
+
+#register-link a{
+    color: #fff;
+    text-shadow: 0 -1px 0 #aa4;
+}
+
+#register-link:hover{
+    background: #4dbfd9;
+}
+
+
+header{
+    margin-top: 50px;
+    background: url('../img/header.png');
+    height: 320px;
+    position: relative;
+}
+
+#pythonlogo{
+    position: absolute;
+    top: 70px;
+    left: 120px;
+    width: 150px;
+}
+
+#title{
+    position: absolute;
+    top: 230px;
+    left: 80px;
+}
+
+#title h1{
+    color: #2D516F;
+    font-size: 55px;
+    letter-spacing: -2px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: -3px;
+}
+
+#title h1 span{
+    font-weight: 300;
+    font-style: italic;
+    color: #F9BE06;
+    font-size: 30px;
+}
+
+#title small{
+    color: #2D516F;
+    font: 20px 'Lato';
+    font-weight: 600;
+}
+
+#title small span{
+    font: 16px 'Lora';
+    font-style: italic;
+    color: #F9BE06;
+}
+
+header #logo{
+    width: 500px;
+    margin-top: 25px;
+}
+
+header div#about{
+    margin-top: 130px;
+    text-align: right;
+    font: 17px 'Lato';
+    font-weight: 300;
+    float: right;
+    color: #fff;
+    width: 500px;
+    text-shadow: 0 -1px 0 #000;
+    line-height: 25px;
+}
+
+header div#about > div{
+    float: right;
+    background: #fff;
+    color: #2D516F;
+    margin-left: 10px;
+    text-shadow: none;
+    width: 220px;
+    font-weight: 800;
+    font-size: 17px;
+    letter-spacing: -1px;
+    text-align: left;
+    padding: 10px;
+    border-radius: 5px;
+    line-height: 17px;
+}
+
+header div#about > div small{
+    font-weight: 300;
+}
+
+
+a.biglink{
+    background: #295071;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #4DBFD9;
+}
+
+a.biglink:hover{
+    text-decoration: none;
+    border-bottom-width: 2px;
+}
+
+section h2{
+    font: 30px 'PT Mono';
+    text-transform: lowercase;
+    color: #295071;
+    padding-bottom: 7px;
+    border-bottom: 3px solid #F9BE06;
+}
+
+section h2 span{
+/*    color: #F9BE06;*/
+    margin-right: 10px;
+    letter-spacing: -8px;
+}
+
+section h3{
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-top: 20px;
+    padding: 0;
+}
+
+section small{
+    color: #999;
+    font: 11px 'Lora';
+    font-style: italic;
+}
+
+
+#sponsors-list{
+    text-align: center;
+}
+
+#sponsors-list h2{
+    text-align: left;
+}
+
+#sponsors-list img{
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+    margin: 20px;
+}
+
+#sponsors-list img:hover{
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+
+#sponsors-list img.platinum{width: 500px;}
+#sponsors-list img.gold{width: 250px;}
+#sponsors-list img.silver{width: 125px;}
+
+
+
+#sponsors-list div > span{
+    display: block;
+    font: 16px 'PT Sans';
+    text-transform: uppercase;
+    width: 100%;
+    text-align: right;
+    color: #B3C8D6;
+    border-top: 5px solid #B3C8D6;
+}
+
+footer{
+    text-align: center;
+    padding-top: 280px;
+    color: #3a2923;
+    text-shadow: 0 -1px 0 #b47f6b;
+    margin: 0;
+    background-image: url('../img/footer-illus.png'), url('../img/ground.png');
+    background-repeat: no-repeat, repeat-x;
+    background-position: center top, center bottom;
+}
+
+footer p{
+    margin: 0;
+    padding-bottom: 30px;
+}
+
+footer a{
+   color: #3a2923;
+   text-shadow: 0 -1px 0 #b47f6b;
+}
+
+footer a:hover{
+    text-shadow: none;
+}
+
+#zen{
+    position: absolute;
+    top: 1750px;
+    left: 20px;
+}
+
+#xkcd{
+    position: absolute;
+    top: 1000px;
+    right: 20px;
+}
+
+.schedules_table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    margin-top: -10px;
+}
+
+.schedules_table td{
+    vertical-align: top;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    width: 25%;
+    border-right: 1px solid #eee;
+    font-size: 17px;
+}
+
+.schedules_table td.light{
+    font-size: 24px;
+    font-weight: 600;
+    color: #295071;
+    border: none;
+}
+
+
+.schedules_table td.light small{
+    font: 18px 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    color: #295071;
+    border: none;
+    padding: 0;
+    margin-bottom: -10px;
+}
+
+.schedules_table td a{
+    font: 12px 'Lora';
+    font-style: italic;
+}
+
+.schedules_table tr.title td{
+    border-top: 10px solid #295071;
+}
+
+.schedules_table td.heading{
+    background: #eee;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+
+
+/* Keynote speakers */
+div.keynotespeakerpic{
+    text-align: center;
+    padding-bottom: 15px;
+/*    padding-bottom: 20px;
+    background: transparent url("img/downarrow.png") no-repeat center bottom;*/
+}
+
+div.keynotespeakerpic img{
+    width: 200px;
+    height: 200px;
+    border-radius: 170px;
+    border: 10px solid #4DBFD9;
+}
+
+div.keynotespeakerinfo{
+    font-size: 20px;
+    text-align: center;
+}
+
+div.keynotespeakerinfo small{
+    font: 14px 'Lato';
+    text-transform: uppercase;
+}
+
+
+/* Venue */
+.map{
+    marign: 0;
+    padding: 0;
+    background: transparent url("../img/bg_map.png");
+    height: 400px;
+}
+
+#venue_details{
+    background: #2D516F;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 400px;
+    padding: 40px;
+    color: #fff;
+}
+
+#venue_details h2{
+    color: #fff;
+    border-color: #fff;
+}
+
+#venue_details small{
+    color: #ddd;
+}
+
+#venue_details a{
+    color: #fff;
+    border-bottom: 1px dotted #fff;
+}
+
+/* Old Photos */
+#oldphotos{
+    margin: 0;
+    padding: 0;
+    background: url("../img/imagegrid.png");
+    height: 400px;
+}
+
+#oldphotostitle{
+/*    background: #2D516F;
+    color: #fff;
+    padding: 10px;*/
+}
+
+#oldphotostitle h2{
+    font: 30px 'Lato';
+    padding: 0;
+    margin: 0;
+    text-transform: -1px;
+    font-weight: 800;
+    text-transform: none;
+    color: #fff;
+    border: none;
+}
+
+/* Video Meta */
+.video h3{
+    margin: 0;
+    margin-top: 10px;
+    letter-spacing: -1px;
+    padding: 0;
+    color: #2D516F;
+    font-size: 20px;
+}
+
+.video small{
+    font-size: 14px;
+}
+
+.video p{
+    margin-top: 10px;
+    font-size: 16px;
+    color: #aaa;
+}
