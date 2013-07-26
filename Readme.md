@@ -1,32 +1,16 @@
-PyCon India 2012 website
-========================
+PyCon India 2012 & 2013 website
+===============================
 
 The is a single page applcaition built using [HasGeek][]'s [baseframe][].
 
 [HasGeek]: http://hasgeek.com/
 [baseframe]: https://github.com/hasgeek/baseframe/
 
-How to run
-----------
 
-Setup virtualenv.
+How to setup
+------------
 
-    $ make venv
-
-Get git-submodules.
-
-    $ git submodule init
-    $ git submodule update
-
-Setup test database.
-
-    $ make bootstrap
-
-Install custom template and css modifications to funnel.
-
-    $ make copy
-
-And run the app.
-
-    $ make run
-
+* Setup an eventframe instance - (see [instructions](https://github.com/hasgeek/eventframe/blob/master/README.md))
+* Set `THEME_PATHS` setting in `instance/settings.py` to full path of pythonindia2012/themes.
+* Download sample data from <http://anandology.com/tmp/pyconindia2012-2013.json>
+* From the admin view, create folder 2013 and import data from `pyconindia2012-2013.json` (the import button is located in the toolbar)
