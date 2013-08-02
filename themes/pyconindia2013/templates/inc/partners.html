@@ -1,9 +1,10 @@
-{% import theme('inc/macros.html') as macros with context  %}
-<section id="partners" class="section">
-  <div class="container">
-    <div class="section-header">
-      <h2>Partners</h2>
+{% from theme('inc/macros.html') import render_sponsor_row with context  %}
+
+  <div class="row-fluid">
+    <div class="span12">
+      <section class="sponsors-list">
+        <h2>Partners</h2>
+        {{ render_sponsor_row("partners", prefix="partner-", klass="silver")}}
+      </section>
     </div>
-    {{ macros.render_sponsor_row("partners", prefix="partner-", klass="silver")}}
   </div>
-</section>

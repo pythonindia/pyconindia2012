@@ -223,15 +223,15 @@ section small{
 }
 
 
-#sponsors-list{
+.sponsors-list{
     text-align: center;
 }
 
-#sponsors-list h2{
+.sponsors-list h2{
     text-align: left;
 }
 
-#sponsors-list img{
+.sponsors-list img{
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
@@ -239,20 +239,20 @@ section small{
     margin: 20px;
 }
 
-#sponsors-list img:hover{
+.sponsors-list img:hover{
     filter: grayscale(0%);
     -webkit-filter: grayscale(0%);
     -moz-filter: grayscale(0%);
     filter: grayscale(0%);
 }
 
-#sponsors-list img.platinum{width: 500px;}
-#sponsors-list img.gold{width: 250px;}
-#sponsors-list img.silver{width: 125px;}
+.sponsors-list img.platinum{width: 500px;}
+.sponsors-list img.gold{width: 250px;}
+.sponsors-list img.silver{width: 125px;}
 
 
 
-#sponsors-list div > span{
+.sponsors-list div > span{
     display: block;
     font: 16px 'PT Sans';
     text-transform: uppercase;
