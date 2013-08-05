@@ -26,3 +26,15 @@ header div#about > div small{
     overflow: hidden;
     background: none;
 }
+
+footer, footer a, footer a:hover {
+    color: #bbb;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.sponsor-box {
+    text-align: left;
+}
