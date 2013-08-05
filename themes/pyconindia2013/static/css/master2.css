@@ -1,6 +1,16 @@
 /* 
 PyCon India customizations to the original design. 
 */
+
+body {
+    background: #fff;
+}
+
+body.home {
+    background: #fff url('../img/bg_body.png') repeat-x;
+}
+
+
 header div#about > div small{
     font-weight: 300;
     letter-spacing: normal;
