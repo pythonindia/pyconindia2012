@@ -21,3 +21,8 @@ header div#about > div small{
     color: inherit;
     font-style: normal;
 }
+
+.map {
+    overflow: hidden;
+    background: none;
+}

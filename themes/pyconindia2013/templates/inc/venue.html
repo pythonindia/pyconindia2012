@@ -1,21 +1,54 @@
-    <div class="map">
-      <div class="wrapper">
-  <div class="row-fluid">
-    <section id="venue">
-      <div class="row-fluid">
-        <div class="span6" id="venue_details">
-    <h2 ><span>&gt;&gt;&gt;</span>Venue</h2>
-    <h3>
-      <a href="maps.google.com">NIMHANS Convention Centre</a><br>
-      <small>Dairy Circle, Bangalore</small>
-    </h3>
-    <br>
-    <p>
-      The Nimhans Convention Centre is s best known venue for large tech events. The venue is on Marigowda Road, past the main Nimhans campus when you approach from Dairy Circle. <a href="#">View location in Google Maps</a>.
-    </p>
+<div class="map" id="map">
+  <div class="wrapper">
+    <div class="row-fluid">
+      <section id="venue">
+        <div class="row-fluid">
+          <div class="span6" id="venue_details">
+      <h2 ><span>&gt;&gt;&gt;</span>Venue</h2>
+      <h3>
+        <a href="maps.google.com">NIMHANS Convention Centre</a><br>
+        <small>Dairy Circle, Bangalore</small>
+      </h3>
+      <br>
+      <p>
+        The Nimhans Convention Centre is s best known venue for large tech events. The venue is on Marigowda Road, past the main Nimhans campus when you approach from Dairy Circle. <a href="#">View location in Google Maps</a>.
+      </p>
+          </div>
         </div>
-      </div>
-    </section>
-  </div>
-      </div>
+      </section>
     </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+function initMap(div, map_venue, map_center) {
+  var map = new L.Map(div);
+  var cloudmadeUrl = 'http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
+    subDomains = ['otile1','otile2','otile3','otile4'],
+    cloudmadeAttrib = '<a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>, <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC-BY-SA</a>';
+  var cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18, attribution: cloudmadeAttrib, subdomains: subDomains});
+
+  var   venue = new L.LatLng(map_venue.lat, map_venue.lon)
+      , center = new L.LatLng(map_center.lat, map_center.lon)
+      ;
+  map.setView(center, 13).addLayer(cloudmade);
+  if ($(window).width() < 768) map.setView(venue,13);
+
+  var marker = new L.Marker(venue);
+  map.addLayer(marker);
+  marker.bindPopup(map_venue.name);
+  marker.openPopup();
+  map.scrollWheelZoom.disable();
+  map.doubleClickZoom.disable();
+  map.on('zoomend', onZoomend);
+  function onZoomend(){ map.setView(venue, map.getZoom()); };
+}
+
+$(function() { 
+  //initMap('map', { lat: 12.9431, lon: 77.5969, name: "NIMHANS Convention Centre"}, { lat: 12.9599, lon: 77.5969});
+  initMap('map', { lat: 12.9431, lon: 77.5969, name: "NIMHANS Convention Centre"}, { lat: 12.9500, lon: 77.5969});
+
+});
+</script>
+
