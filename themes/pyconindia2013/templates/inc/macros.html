@@ -3,7 +3,7 @@
   {% if node %}
     {% set website = node.properties.get("website") %}
     {% set image_url = node.properties.get("image") %}
-    {% set has_content = node.properties.get("content") != "false" %}
+    {% set has_content = False and node.properties.get("content") != "false" %}
     {% if has_content %}
       <a data-toggle="modal" href="#{{name}}"><img class="{{klass}}" alt="{{node.title}}" src="{{ image_url }}"></a>
     {% else %}
@@ -18,7 +18,7 @@
   {% if node %}
     {% set website = node.properties.get("website") %}
     {% set image_url = node.properties.get("image") %}
-    {% set has_content = node.properties.get("content") != "false" %}
+    {% set has_content = False and node.properties.get("content") != "false" %}
     {% if has_content %}
       <div class="modal fade sponsor-box" id="{{name}}">
         <div class="modal-header">
