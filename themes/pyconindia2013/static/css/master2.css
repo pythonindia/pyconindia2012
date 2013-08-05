@@ -48,3 +48,11 @@ footer a:hover {
 .sponsor-box {
     text-align: left;
 }
+
+#schedule p {
+    font-size: 17px;
+}
+
+#workshops p {
+    font-size: 17px;
+}
