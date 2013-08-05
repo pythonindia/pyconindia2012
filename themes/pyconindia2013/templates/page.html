@@ -4,5 +4,8 @@
 {% block description %}{{ node.description }}{% endblock %}
 
 {% block content %}
+<section class="page">
+<h2>{{ self.title() }}</h2>
 {{ node.content }}
+</section>
 {% endblock %}

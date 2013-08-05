@@ -5,12 +5,15 @@
 
 {% block headline %}{% endblock %}
 {% block content %}
+<section class="blog">
+  <h2>PyCon India Blog</h2>
+
 <div class="description">
   {{ node.content }}
 </div>
 <div class="row blog">
   <div class="span7">
-    {% for post in feed() -%}
+    {% for post in feed(limit=1000) -%}
       <h3><a href="{{ url_for('node', folder=post.folder.name, node=post.name) }}">{{ post.title }}</a></h3>
       <div class="post-date"> <small>{{ post.published_at|longdate }}</small> <span class="author">{{ post.user.fullname }}</span></div>
       <div class="post-content">
@@ -21,4 +24,5 @@
     {%- endfor %}
   </div>
 </div>
+</section>
 {% endblock %}

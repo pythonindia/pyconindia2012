@@ -5,10 +5,12 @@
 
 {% block headline %}{% endblock %}
 {% block content %}
+<section class="post">
+  <h2><a href="/blog">PyCon India Blog</a></h2>
 <div class="row blog page-top">
   <div class="span7">
     <div class="page-header">
-      <h2>{{ self.title() }} <small>{{ node.published_at|longdate }}</small></h2>
+      <h3>{{ self.title() }} <small>{{ node.published_at|longdate }}</small></h3>
     </div>
     {{ node.content }}
     <p class="author">{{ node.user.fullname }}</p>
@@ -31,4 +33,5 @@
   </div>
   #}
 </div>
+</section>
 {% endblock %}
