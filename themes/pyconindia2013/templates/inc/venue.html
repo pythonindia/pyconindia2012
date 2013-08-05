@@ -1,20 +1,21 @@
-<section id="venue" class="section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="right">Venue</h2>
+    <div class="map">
+      <div class="wrapper">
+  <div class="row-fluid">
+    <section id="venue">
+      <div class="row-fluid">
+        <div class="span6" id="venue_details">
+    <h2 ><span>&gt;&gt;&gt;</span>Venue</h2>
+    <h3>
+      <a href="maps.google.com">NIMHANS Convention Centre</a><br>
+      <small>Dairy Circle, Bangalore</small>
+    </h3>
+    <br>
+    <p>
+      The Nimhans Convention Centre is s best known venue for large tech events. The venue is on Marigowda Road, past the main Nimhans campus when you approach from Dairy Circle. <a href="#">View location in Google Maps</a>.
+    </p>
+        </div>
+      </div>
+    </section>
+  </div>
+      </div>
     </div>
-    <div class="row map-box">
-      <div class="span5">
-        {% with f = fragment('2013', 'venue-blurb') %}
-          <div class="section-subheader">
-            <h3>{{ f.title }}</h3>
-          </div>
-          {{ f.content }}
-        {% endwith %}
-      </div>
-      <div class="span7">
-        <div id="map" class="map"></div>
-      </div>
-    </div><!-- /row -->
-  </div><!-- /container -->
-</section><!-- /venue -->

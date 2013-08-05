@@ -6,3 +6,18 @@ header div#about > div small{
     letter-spacing: normal;
 }
 
+.schedules_table td a{
+    font: inherit;
+    font-style: normal;
+}
+
+.schedules_table td a.speaker {
+    font: 12px 'Lora';
+    font-style: italic;
+}
+
+.schedules_table td a.title {
+    font: inherit;
+    color: inherit;
+    font-style: normal;
+}

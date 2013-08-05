@@ -1,8 +1,6 @@
 <section id="blog">
   <h2 >Blog</h2>
-
   <div> {{ feed(limit=4) }}</div>
-
   {% for post in feed(limit=4) -%}
     {% if post.published_at.year == 2013 %}
         <h3>

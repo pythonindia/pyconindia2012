@@ -2,6 +2,8 @@
 <html>
   <head>
 
+    <link rel="stylesheet" href="/static/css/baseframe-packed.css?f7428024"/>
+
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet" media="screen and (min-width: 1000px)">
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900,300italic,400italic,900italic|Lora:400,700,400italic,700italic|PT+Mono' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" media="screen and (min-width: 1000px)" href="{{theme_static('css/master.css')}}" />
@@ -13,471 +15,52 @@
     <title>PyCon India 2013: Bangalore</title>
   </head>
   <body>
-
     <div class="wrapper">
-
-      <nav>
-  <ul>
-    <li><a href="#">About</a></li>
-    <li><a href="#workshops">Schedule</a></li>
-    <li><a href="#blog">Blog</a></li>
-    <li><a href="#sponsors-list">Sponsors</a></li>
-    <li><a href="#venue">Venue</a></li>
-    <li><a href="#">Python Month</a></li>
-    <li id="register-link"><a href="http://pyconindia2013.doattend.com/">Register</a></li>
-  </ul>
-      </nav>
-
-      <header>
-
-  <img src="{{theme_static('img/pythonlogo.png')}}" id="pythonlogo" />
-
-  <div id="title">
-    <h1>PyCon India<span> 2013</span></h1>
-    <small>Bangalore &middot; <span>NIMHANS Convention Centre</span></small>
-  </div>
-
-  <div id="about">
-    <p>
-      PyCon India, the premier conference in India on using and developing the Python programming language is conducted annually by the Python developer community and it attracts the best Python programmers from across the country and abroad.
-    </p>
-
-    <div>
-      <small>Conference</small><br>
-      August 31 & September 1, 2013
-    </div>
-    <div>
-      <small>Workshops</small><br>
-      August 30, 2013
-    </div>
-
-  </div>
-
-      </header>
+      {% include theme("inc/nav.html") %}
+      {% include theme("inc/header.html") %}
 
       <a id="zen" href="http://www.python.org/dev/peps/pep-0020/"><img src="{{theme_static('img/zen.png')}}" /></a>
       <a id="xkcd" href="http://xkcd.com/353/"><img src="{{theme_static('img/xkcd.png')}}" /></a>
 
       <div class="clearspace">&nbsp;</div>
-
-      <section id="keynotespeakers">
-  <div class="row-fluid">
-    <div class="span6">
-      <div class="keynotespeakerpic">
-        <img src="{{theme_static('img/speakers/kiran.jpg')}}">
-      </div>
-      <div class="keynotespeakerinfo">
-        <strong><a href="https://twitter.com/jackerhack">Kiran Jonnalagadda</a></strong><br>
-        <small>keynote speaker</small>
-      </div>
-    </div>
-    <div class="span6">
-      <div class="keynotespeakerpic">
-        <img src="{{theme_static('img/speakers/kenneth.jpg')}}">
-      </div>
-      <div class="keynotespeakerinfo">
-        <strong><a href="https://twitter.com/kennethreitz">Kenneth Reitz</a></strong><br>
-        <small>keynote speaker</small>
-      </div>
-    </div>
-  </div>
-      </section>
+      {% include theme("inc/keynotes.html") %}
 
       <div class="clearspace">&nbsp;</div>
-
 
       <div class="wrapper">
-  <div class="row-fluid">
-
-    <div class="span6">
-        {% include theme("inc/blog.html") %}
-    </div>
-
-    <div class="span6">
-      <section id="twitter">
-        <h2 ><span>&gt;&gt;&gt;</span>Twitter</h2>
-
-        <p class="tweet">
-    Please welcome the latest Gold level sponsor for PyCon 2014: PlaidCloud! <a href="#">http://help.plaidcloud.com</a>  <a href="#">http://bit.ly/12z0vzH</a> <a href="#">@plaidcloud</a> <a href="#">#pycon</a>
-    <br>
-    <small>5 minutes ago</small>
-        </p>
-
-        <p class="tweet">
-    Please welcome the latest Gold level sponsor for PyCon 2014: PlaidCloud! <a href="#">http://help.plaidcloud.com</a>  <a href="#">http://bit.ly/12z0vzH</a> <a href="#">@plaidcloud</a> <a href="#">#pycon</a>
-    <br>
-    <small>5 minutes ago</small>
-        </p>
-
-        <p class="tweet">
-    Please welcome the latest Gold level sponsor for PyCon 2014: PlaidCloud! <a href="#">http://help.plaidcloud.com</a>  <a href="#">http://bit.ly/12z0vzH</a> <a href="#">@plaidcloud</a> <a href="#">#pycon</a>
-    <br>
-    <small>5 minutes ago</small>
-        </p>
-
-        <a href="/blog/">See all Tweets &raquo;</a>
-      </section>
-    </div>
-
-  </div>
-
-  <div class="clearspace">&nbsp;</div>
-
-  <!--
-      <div class="row-fluid">
-        <div class="span4">
-    <section id="participate">
-      <h2 ><span>&gt;&gt;&gt;</span>Participate</h2>
-      <p>
-        Get the tickets now!<br>
-        Look at the <a href="#">exciting proposals</a>!
-        <br><br>
-        <a href="#" class="biglink">Book Now</a>
-      </p>
-    </section>
+        <div class="row-fluid">
+          <div class="span6">
+            {% include theme("inc/blog.html") %}
+          </div>
+          <div class="span6">
+            {% include theme("inc/twitter.html") %}
+          </div>
         </div>
+        <div class="clearspace">&nbsp;</div>
+        {% include theme("inc/workshops.html") %}
 
-        <div class="span4">
-    <section id="speak">
-      <h2 ><span>&gt;&gt;&gt;</span>Speak</h2>
-      <p>
-        Do you have what is takes to speak to fellow Pythonistas?
-        <br><br>
-        <a href="#" class="biglink">Propose a Session</a>
-      </p>
-    </section>
-        </div>
+        <div class="clearspace">&nbsp;</div>
+        {% include theme("inc/schedule.html") %}
 
+        <div class="clearspace">&nbsp;</div>
+        {% include theme("inc/sponsors.html") %}
 
-        <div class="span4">
-    <section id="sponsor">
-      <h2 ><span>&gt;&gt;&gt;</span>Sponsor</h2>
-      <p>
-        Would you or your employer like to sponsor PyCon India?
-        <br><br>
-        <a href="#" class="biglink">Get in touch</a>
-      </p>
-    </section>
-        </div>
-
+        <div class="clearspace">&nbsp;</div>
+        {% include theme("inc/partners.html") %}
       </div>
 
       <div class="clearspace">&nbsp;</div>
-      -->
-  <section id="workshops">
-    <h2><span>&gt;&gt;&gt;</span>workshops</h2>
-    <table id="workshop-list" class="schedules_table">
-      <tr class="title">
-        <td class="light"><small>30<sup>th</sup> August<br></small>Friday</td>
-        <td class="heading"><strong>Auditorium I</strong></td>
-        <td class="heading"><strong>Room 42</strong></td>
-        <td class="heading"><strong>Behind You</strong></td>
-      </tr>
-      <tr>
-        <td class="heading"><b>9:00</b> to <b>10:00</b></td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-        <td>
-    Kivy Framework<br>
-    <a href="#">Akshay Arora</a>
-        </td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-
-      </tr>
-      <tr>
-        <td class="heading"><b>9:00</b> to <b>10:00</b></td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-        <td>
-    Kivy Framework<br>
-    <a href="#">Akshay Arora</a>
-        </td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="heading"><b>9:00</b> to <b>10:00</b></td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-        <td>
-    Kivy Framework<br>
-    <a href="#">Akshay Arora</a>
-        </td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="heading"><b>9:00</b> to <b>10:00</b></td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-        <td>
-    Kivy Framework<br>
-    <a href="#">Akshay Arora</a>
-        </td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-      </tr>
-    </table>
-  </section>
-
-  <div class="clearspace">&nbsp;</div>
-
-  <section id="schedule">
-    <h2><span>&gt;&gt;&gt;</span>schedule</h2>
-    <table id="schedule-list" class="schedules_table">
-      <tr class="title">
-        <td class="light"><small>31<sup>st</sup> August<br></small>Saturday</td>
-        <td class="heading"><strong>Auditorium I</strong></td>
-        <td class="heading"><strong>Room 42</strong></td>
-        <td class="heading"><strong>Behind You</strong></td>
-      </tr>
-      <tr>
-        <td class="heading"><b>9:00</b> to <b>10:00</b></td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-        <td>
-    Kivy Framework<br>
-    <a href="#">Akshay Arora</a>
-        </td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="heading"><b>9:00</b> to <b>10:00</b></td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-        <td>
-    Kivy Framework<br>
-    <a href="#">Akshay Arora</a>
-        </td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="heading"><b>9:00</b> to <b>10:00</b></td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-        <td>
-    Kivy Framework<br>
-    <a href="#">Akshay Arora</a>
-        </td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-      </tr>
-      <tr>
-        <td class="heading"><b>9:00</b> to <b>10:00</b></td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-        <td>
-    Kivy Framework<br>
-    <a href="#">Akshay Arora</a>
-        </td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-
-      </tr>
-
-      <tr class="title">
-        <td class="light"><small>1<sup>st</sup> September<br></small>Sunday</td>
-        <td class="heading"><strong>Auditorium I</strong></td>
-        <td class="heading"><strong>Room 42</strong></td>
-        <td class="heading"><strong>Behind You</strong></td>
-      </tr>
-      <tr>
-        <td class="heading"><b>9:00</b> to <b>10:00</b></td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-        <td>
-    Kivy Framework<br>
-    <a href="#">Akshay Arora</a>
-        </td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-
-      </tr>   <tr>
-        <td class="heading"><b>9:00</b> to <b>10:00</b></td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-        <td>
-    Kivy Framework<br>
-    <a href="#">Akshay Arora</a>
-        </td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-
-      </tr>   <tr>
-        <td class="heading"><b>9:00</b> to <b>10:00</b></td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-        <td>
-    Kivy Framework<br>
-    <a href="#">Akshay Arora</a>
-        </td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-
-      </tr>
-      <tr>
-        <td class="heading"><b>9:00</b> to <b>10:00</b></td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-        <td>
-    Kivy Framework<br>
-    <a href="#">Akshay Arora</a>
-        </td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-
-      </tr>
-
-    </table>
-  </section>
-
-  <div class="clearspace">&nbsp;</div>
-  {% include theme("inc/sponsors.html") %}
-
-  <div class="clearspace">&nbsp;</div>
-  {% include theme("inc/partners.html") %}
-
-      </div>
-
-      <div class="clearspace">&nbsp;</div>
-
-    </div>
-    <div class="map">
-      <div class="wrapper">
-  <div class="row-fluid">
-    <section id="venue">
-      <div class="row-fluid">
-        <div class="span6" id="venue_details">
-    <h2 ><span>&gt;&gt;&gt;</span>Venue</h2>
-    <h3>
-      <a href="maps.google.com">NIMHANS Convention Centre</a><br>
-      <small>Dairy Circle, Bangalore</small>
-    </h3>
-    <br>
-    <p>
-      The Nimhans Convention Centre is s best known venue for large tech events. The venue is on Marigowda Road, past the main Nimhans campus when you approach from Dairy Circle. <a href="#">View location in Google Maps</a>.
-    </p>
-        </div>
-      </div>
-    </section>
-  </div>
-      </div>
     </div>
 
+    {% include theme("inc/venue.html") %}
 
+    <!--
     <div class="clearspace">&nbsp;</div>
+    {% include theme("inc/2012.html") %}
+    -->
 
-
-    <div class="wrapper">
-      <section id="pyconpresentations">
-  <h2><span>&gt;&gt;&gt;</span>PyCon Presentations</h2>
-  <div class="row-fluid">
-    <div class="span4 video">
-      <iframe width="316" height="178" src="http://www.youtube.com/embed/sygCiQcE_1c?list=PL6GW05BfqWIdWaV_aP6kHJKFY0ybOOfoA" frameborder="0" allowfullscreen></iframe>
-      <h3>Solving Puzzles</h3>
-      <small>by<a href="#"> Anand Chitipothu</a></small>
-    </div>
-
-    <div class="span4 video">
-      <iframe width="316" height="178" src="http://www.youtube.com/embed/sygCiQcE_1c?list=PL6GW05BfqWIdWaV_aP6kHJKFY0ybOOfoA" frameborder="0" allowfullscreen></iframe>
-      <h3>Solving Puzzles</h3>
-      <small>by<a href="#"> Anand Chitipothu</a></small>
-    </div>
-
-    <div class="span4 video">
-      <iframe width="316" height="178" src="http://www.youtube.com/embed/sygCiQcE_1c?list=PL6GW05BfqWIdWaV_aP6kHJKFY0ybOOfoA" frameborder="0" allowfullscreen></iframe>
-      <h3>Solving Puzzles</h3>
-      <small>by<a href="#"> Anand Chitipothu</a></small>
-    </div>
-  </div>
-  <br><br>
-  <div class="row-fluid">
-    <div class="span4 video">
-      <iframe width="316" height="178" src="http://www.youtube.com/embed/sygCiQcE_1c?list=PL6GW05BfqWIdWaV_aP6kHJKFY0ybOOfoA" frameborder="0" allowfullscreen></iframe>
-      <h3>Solving Puzzles</h3>
-      <small>by<a href="#"> Anand Chitipothu</a></small>
-    </div>
-
-    <div class="span4 video">
-      <iframe width="316" height="178" src="http://www.youtube.com/embed/sygCiQcE_1c?list=PL6GW05BfqWIdWaV_aP6kHJKFY0ybOOfoA" frameborder="0" allowfullscreen></iframe>
-      <h3>Solving Puzzles</h3>
-      <small>by<a href="#"> Anand Chitipothu</a></small>
-    </div>
-
-    <div class="span4 video">
-      <iframe width="316" height="178" src="http://www.youtube.com/embed/sygCiQcE_1c?list=PL6GW05BfqWIdWaV_aP6kHJKFY0ybOOfoA" frameborder="0" allowfullscreen></iframe>
-      <h3>Solving Puzzles</h3>
-      <small>by<a href="#"> Anand Chitipothu</a></small>
-    </div>
-  </div>
-      </section>
-    </div>
+    <div class="clearspace">&nbsp;</div>    
     <div class="clearspace">&nbsp;</div>
-
-    <div id="oldphotos">
-      <div class="wrapper">
-  <div class="row-fluid">
-    <div class="span4" id="oldphotostitle">
-      <section>
-        <!--        <h2 >PyCon India 2012</h2>-->
-      </section>
-    </div>
-  </div>
-      </div>
-    </div>
-
-    <div class="clearspace">&nbsp;</div>    <div class="clearspace">&nbsp;</div>
 
     <footer>
       <p>Copyright &copy; 2013 IPSS &middot; Powered by HasGeek's <a href="#">EventFrame</a></p>

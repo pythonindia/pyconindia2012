@@ -1,0 +1,31 @@
+{% from theme('inc/macros.html') import render_talk with context  %}
+  
+  <section id="workshops">
+    <h2>workshops</h2>
+    <table id="workshop-list" class="schedules_table">
+      <tr class="title">
+        <td class="light"><small>30<sup>th</sup> August<br></small>Friday</td>
+        <td class="heading"><strong>Track 1</strong></td>
+        <td class="heading"><strong>Track 2</strong></td>
+        <td class="heading"><strong>Track 3</strong></td>
+      </tr>
+      <tr>
+          <td class="heading"><b>9:30</b> to <b>12:30</b></td>
+          <td>{{ render_talk(51) }}</td> {# test your code #}
+          <td>{{ render_talk(5)  }}</td> {# selenium       #}
+          <td>{{ render_talk(31) }}</td> {# celery         #}
+      </tr>
+      <tr>
+          <td class="heading"><b>13:00</b> to <b>15:30</b></td>
+          <td>{{ render_talk(5)  }}</td> {# selenium       #}
+          <td>{{ render_talk(51) }}</td> {# test your code #}
+          <td>{{ render_talk(31) }}</td> {# celery         #}
+      </tr>
+      <tr>
+          <td class="heading"><b>16:00</b> to <b>18:30</b></td>
+          <td>{{ render_talk(31) }}</td> {# celery         #}
+          <td>{{ render_talk(51) }}</td> {# test your code #}
+          <td>{{ render_talk(5)  }}</td> {# selenium       #}
+      </tr>
+    </table>
+  </section>
