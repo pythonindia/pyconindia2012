@@ -47,7 +47,9 @@ function initMap(div, map_venue, map_center) {
 
 $(function() { 
   //initMap('map', { lat: 12.9431, lon: 77.5969, name: "NIMHANS Convention Centre"}, { lat: 12.9599, lon: 77.5969});
-  initMap('map', { lat: 12.9431, lon: 77.5969, name: "NIMHANS Convention Centre"}, { lat: 12.9500, lon: 77.5969});
+  var html = "<b>VENUE</b><br/>NIMHANS Convention Centre<br/>Dairy Circle, Bangalore";
+  html = html + "<br/><br/> <a href='https://maps.google.com/maps?q=NIMHANS+convention+centre+bangalore&t=m&z=13'>View location in Google Maps</a>"
+  initMap('map', { lat: 12.9431, lon: 77.5969, name: html}, { lat: 12.9500, lon: 77.5969});
 
 });
 </script>
