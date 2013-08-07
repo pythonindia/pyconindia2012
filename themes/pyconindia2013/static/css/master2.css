@@ -56,3 +56,8 @@ footer a:hover {
 #workshops p {
     font-size: 17px;
 }
+
+img.gold {
+    width: auto;
+    max-width: 250px;
+}
