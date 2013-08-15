@@ -1,148 +1,161 @@
+{% from theme('inc/macros.html') import render_talk with context  %}
+
   <section id="schedule">
     <h2>Schedule</h2>
-    
-    <p>The schedule will be available in next couple of days.</p>
-    <p>Please look at the <a href="/funnel/2013">confirmed sessions</a>.</p>
-
-    {#
     <table id="schedule-list" class="schedules_table">
       <tr class="title">
         <td class="light"><small>31<sup>st</sup> August<br></small>Saturday</td>
         <td class="heading"><strong>Auditorium I</strong></td>
-        <td class="heading"><strong>Room 42</strong></td>
-        <td class="heading"><strong>Behind You</strong></td>
+        <td class="heading"><strong>Auditorium II</strong></td>
+        <td class="heading"><strong>Auditorium III</strong></td>
       </tr>
       <tr>
-        <td class="heading"><b>9:00</b> to <b>10:00</b></td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-        <td>
-    Kivy Framework<br>
-    <a href="#">Akshay Arora</a>
-        </td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
+        <td class="heading"><b>08:00</b> to <b>09:00</b></td>
+        <td colspan="3" style="text-align: center;"><em>Breakfast &amp; Registrations</em></td>
+      </tr>    
+      <tr>
+        <td class="heading"><b>09:00</b> to <b>09:30</b></td>
+        <td><em>Introductions</em></td>
+        <td></td>
+        <td></td>
+      </tr>    
+      <tr>
+        <td class="heading"><b>09:30</b> to <b>10:15</b></td>
+        <td><em>Keynote</em></td>
+        <td></td>
+        <td></td>
+      </tr>    
+      <tr>
+        <td class="heading"><b>10:15</b> to <b>10:45</b></td>
+        <td colspan="3" style="text-align: center;"><em>Break</em></td>
+      </tr>    
+      <tr>
+        <td class="heading"><b>10:45</b> to <b>11:30</b></td>
+        <td>{{ render_talk(44) }}</td> {# flask #}
+        <td>{{ render_talk(93) }}</td> {# logging #}
+        <td rowspan="3">Open Space</td>
+      </tr>    
+      <tr>
+        <td class="heading"><b>11:30</b> to <b>12:15</b></td>
+        <td>{{ render_talk(59) }}</td> {# django #}
+        <td>{{ render_talk(45) }}</td> {# zeromq #}
       </tr>
       <tr>
-        <td class="heading"><b>9:00</b> to <b>10:00</b></td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-        <td>
-    Kivy Framework<br>
-    <a href="#">Akshay Arora</a>
-        </td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
+        <td class="heading"><b>12:15</b> to <b>13:00</b></td>
+        <td>{{ render_talk(71) }}</td> {# graph #}
+        <td>{{ render_talk(54) }}</td> {# package #}
       </tr>
       <tr>
-        <td class="heading"><b>9:00</b> to <b>10:00</b></td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
+        <td class="heading"><b>13:00</b> to <b>14:00</b></td>
+        <td colspan="3" style="text-align: center;"><em>Lunch</em></td>
+      </tr>    
+      <tr>
+        <td class="heading"><b>14:00</b> to <b>14:45</b></td>
+        <td>{{ render_talk(87) }}</td> {# rapid #}
+        <td>{{ render_talk(76) }}</td> {# plivo #}
+        <td>Open Space</td>
+      </tr>    
+      <tr>
+        <td class="heading"><b>14:45</b> to <b>15:30</b></td>
+        <td>Python in Education<br/>
+            <small>PANEL DISCUSSION</small>
         </td>
-        <td>
-    Kivy Framework<br>
-    <a href="#">Akshay Arora</a>
-        </td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
-        <td class="heading"><b>9:00</b> to <b>10:00</b></td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-        <td>
-    Kivy Framework<br>
-    <a href="#">Akshay Arora</a>
-        </td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-
+        <td class="heading"><b>15:30</b> to <b>16:00</b></td>
+        <td colspan="3" style="text-align: center;"><em>Break</em></td>
       </tr>
-
+      <tr>
+        <td class="heading"><b>16:00</b> to <b>16:45</b></td>
+        <td>{{ render_talk(29) }}</td> {# memory #}
+        <td>{{ render_talk(53) }}</td> {# ansible #}
+        <td rowspan="2">Open Space</td>
+      </tr>    
+      <tr>
+        <td class="heading"><b>16:45</b> to <b>17:30</b></td>
+        <td>{{ render_talk(65) }}</td> {# unicode #}
+        <td>{{ render_talk(86) }}</td> {# skynet #}
+      </tr>
       <tr class="title">
         <td class="light"><small>1<sup>st</sup> September<br></small>Sunday</td>
         <td class="heading"><strong>Auditorium I</strong></td>
-        <td class="heading"><strong>Room 42</strong></td>
-        <td class="heading"><strong>Behind You</strong></td>
+        <td class="heading"><strong>Auditorium II</strong></td>
+        <td class="heading"><strong>Auditorium III</strong></td>
       </tr>
       <tr>
-        <td class="heading"><b>9:00</b> to <b>10:00</b></td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-        <td>
-    Kivy Framework<br>
-    <a href="#">Akshay Arora</a>
-        </td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-
-      </tr>   <tr>
-        <td class="heading"><b>9:00</b> to <b>10:00</b></td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-        <td>
-    Kivy Framework<br>
-    <a href="#">Akshay Arora</a>
-        </td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-
-      </tr>   <tr>
-        <td class="heading"><b>9:00</b> to <b>10:00</b></td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-        <td>
-    Kivy Framework<br>
-    <a href="#">Akshay Arora</a>
-        </td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-
+        <td class="heading"><b>08:00</b> to <b>09:00</b></td>
+        <td colspan="3" style="text-align: center;"><em>Breakfast &amp; Registrations</em></td>
+      </tr>    
+      <tr>
+        <td class="heading"><b>09:00</b> to <b>09:30</b></td>
+        <td><em>Introductions</em></td>
+        <td></td>
+        <td></td>
+      </tr>    
+      <tr>
+        <td class="heading"><b>09:30</b> to <b>10:15</b></td>
+        <td><em>Keynote</em></td>
+        <td></td>
+        <td></td>
+      </tr>    
+      <tr>
+        <td class="heading"><b>10:15</b> to <b>10:45</b></td>
+        <td colspan="3" style="text-align: center;"><em>Break</em></td>
+      </tr>    
+      <tr>
+        <td class="heading"><b>10:45</b> to <b>11:30</b></td>
+        <td>{{ render_talk(21) }}</td> {# raspberry #}
+        <td>{{ render_talk(88) }}</td> {# predicting #}
+        <td rowspan="3">Open Space</td>
+      </tr>    
+      <tr>
+        <td class="heading"><b>11:30</b> to <b>12:15</b></td>
+        <td>{{ render_talk(82) }}</td> {# robotics #}
+        <td>{{ render_talk(103) }}</td> {# datamining #}
       </tr>
       <tr>
-        <td class="heading"><b>9:00</b> to <b>10:00</b></td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-        <td>
-    Kivy Framework<br>
-    <a href="#">Akshay Arora</a>
-        </td>
-        <td>
-    A Beginner's Guide to Django Forms<br>
-    <a href="#">Arunachalam</a>
-        </td>
-
+        <td class="heading"><b>12:15</b> to <b>13:00</b></td>
+        <td>{{ render_talk(36) }}</td> {# arduino #}
+        <td>{{ render_talk(32) }}</td> {# pycuda #}
       </tr>
-
+      <tr>
+        <td class="heading"><b>13:00</b> to <b>14:00</b></td>
+        <td colspan="3" style="text-align: center;"><em>Lunch</em></td>
+      </tr>    
+      <tr>
+        <td class="heading"><b>14:00</b> to <b>14:45</b></td>
+        <td>{{ render_talk(73) }}</td> {# powerpoint #}
+        <td>{{ render_talk(70) }}</td> {# selenium #}
+        <td rowspan="2">Open Space</td>
+      </tr>    
+      <tr>
+        <td class="heading"><b>14:45</b> to <b>15:30</b></td>
+        <td>{{ render_talk(101) }}</td> {# penetration testing #}
+        <td>{{ render_talk(61) }}</td> {# storm/neo4j #}
+      </tr>
+      <tr>
+        <td class="heading"><b>15:30</b> to <b>16:00</b></td>
+        <td colspan="3" style="text-align: center;"><em>Break</em></td>
+      </tr>
+      <tr>
+        <td class="heading"><b>16:00</b> to <b>16:45</b></td>
+        <td>{{ render_talk(78) }}</td> {# ipython #}
+        <td>{{ render_talk(43) }}</td> {# scrapy #}
+        <td>Open Space</td>
+      </tr>    
+      <tr>
+        <td class="heading"><b>16:45</b> to <b>17:30</b></td>
+        <td>Lightening Talks</td>
+        <td></td>
+        <td></td>
+      </tr>      
+      <tr>
+        <td class="heading"><b>17:30</b> to <b>18:30</b></td>
+        <td>IPSS AGM</td>
+        <td></td>
+        <td></td>
+      </tr>
     </table>
-    #}
   </section>
