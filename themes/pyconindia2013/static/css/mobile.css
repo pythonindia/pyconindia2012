@@ -293,7 +293,7 @@ footer{
     color: #fff;
     text-shadow: 0 -1px 0 #b47f6b;
     background-color: transparent;
-    background-image: url("img/footer-small.png"), url('img/bg_small_footer.png');
+    background-image: url("../img/footer-small.png"), url('../img/bg_small_footer.png');
     background-repeat: no-repeat, repeat-x;
     background-position: center top, center bottom;
 /*    border-top: 10px #5BC55C solid;*/
@@ -369,4 +369,20 @@ div.keynotespeakerinfo{
 div.keynotespeakerinfo small{
     font: 14px 'Lato';
     text-transform: uppercase;
+}
+
+/* Customizations by Anand */
+
+nav {
+    display: none;
+}    
+
+footer {
+    color: #bbb;
+    text-shadow: none;
+}
+footer a {
+    color: #bbb;
+    text-shadow: none;
+    text-decoration: underline;    
 }
