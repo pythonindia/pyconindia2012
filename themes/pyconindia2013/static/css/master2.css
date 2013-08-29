@@ -61,3 +61,10 @@ footer a:hover {
     width: auto;
     max-width: 250px;
 }
+
+.mobile-only {
+    display: none;
+}
+.desktop-only {
+    display: block;
+}

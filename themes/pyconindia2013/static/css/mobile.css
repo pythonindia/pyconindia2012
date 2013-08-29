@@ -439,3 +439,11 @@ footer a {
 table.mobile_schedule {
     border-bottom: 2px solid #ddd;
 }
+
+.mobile-only {
+    display: block;
+}
+
+.desktop-only {
+    display: none;
+}
