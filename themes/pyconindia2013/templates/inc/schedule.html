@@ -1,6 +1,6 @@
-{% from theme('inc/macros.html') import render_talk with context  %}
+{% from theme('inc/macros.html') import render_talk, render_talk_mobile with context  %}
 
-  <section id="schedule">
+  <section id="schedule" class="desktop-only">
     <h2>Schedule</h2>
     <table id="schedule-list" class="schedules_table">
       <tr class="title">
@@ -158,4 +158,217 @@
         <td></td>
       </tr>
     </table>
+  </section>
+
+<section class="mobile-only">
+    <h2>schedule</h2>
+    <table class="mobile_schedule schedules_table">
+      <tbody><tr class="title">
+        <td colspan="2" class="light">
+          <small>31<sup>st</sup> August, </small>Saturday
+        </td>
+      </tr>
+      <tr class="time">
+        <td><b>08:00</b> to <b>09:00</b></td>
+      </tr>
+      <tr>
+        <td>
+          <em>Breakfast &amp; Registrations</em>
+        </td>
+      </tr>
+      <tr class="time">
+        <td><b>09:00</b> to <b>09:30</b></td>
+      </tr>
+      <tr class="talk">
+        <td>
+          <em>Introductions</em>
+          <div class="audi">Auditorium I</div>
+        </td>
+      </tr>
+      <tr class="time">
+        <td><b>09:30</b> to <b>10:15</b></td>
+      </tr>
+      <tr class="talk">
+        <td>
+          <em>Keynote by Kiran Jonnalagadda</em>
+          <div class="audi">Auditorium I</div>
+        </td>
+      </tr>
+      <tr class="time">
+        <td><b>10:15</b> to <b>10:45</b></td>
+      </tr>
+      <tr class="talk">
+        <td>
+          <em>Break</em>
+        </td>
+      </tr>
+      <tr class="time">
+        <td><b>10:45</b> to <b>11:30</b></td>
+      </tr>
+      {{ render_talk_mobile(44, "Auditorium I") }}
+      {{ render_talk_mobile(93, "Auditorium II") }}
+      <tr class="time">
+        <td><b>11:30</b> to <b>12:15</b></td>
+      </tr>
+      {{ render_talk_mobile(59, "Auditorium I") }} {# django #}
+      {{ render_talk_mobile(45, "Auditorium II") }} {# zeromq #}
+
+      <tr class="time">
+        <td><b>12:15</b> to <b>13:00</b></td>
+      </tr>
+      {{ render_talk_mobile(71, "Auditorium I") }} 
+      {{ render_talk_mobile(54, "Auditorium II") }}
+
+      <tr class="time">
+        <td><b>13:00</b> to <b>14:00</b></td>
+      </tr>
+      <tr class="talk">
+        <td>
+          <em>Lunch</em>
+        </td>
+      </tr>
+
+      <tr class="time">
+        <td><b>14:00</b> to <b>14:45</b></td>
+      </tr>
+      {{ render_talk_mobile(87, "Auditorium I") }} 
+      {{ render_talk_mobile(76, "Auditorium II") }}
+      
+      <tr class="time">
+        <td><b>14:45</b> to <b>15:30</b></td>
+      </tr>
+      <tr class="talk">
+        <td>
+          Python in Education<br/>
+          <small>PANEL DISCUSSION</small>
+          <div class="audi">Auditorium I</div>
+        </td>
+      </tr>
+      <tr class="time">
+        <td><b>15:30</b> to <b>16:00</b></td>
+      </tr>
+      <tr class="talk">
+        <td>
+          <em>Break</em>
+        </td>
+      </tr>
+      <tr class="time">
+        <td><b>16:00</b> to <b>16:45</b></td>
+      </tr>
+      {{ render_talk_mobile(29, "Auditorium I") }} 
+      {{ render_talk_mobile(53, "Auditorium II") }}
+
+      <tr class="time">
+        <td><b>16:45</b> to <b>17:30</b></td>
+      </tr>
+      <tr class="talk">
+        <td>
+          <em>Lightening Talks</em>
+          <div class="audi">Auditorium I</div>          
+        </td>
+      </tr>
+      {{ render_talk_mobile(86, "Auditorium II") }}
+
+      <tr class="title">
+        <td colspan="2" class="light">
+          <small>1<sup>st</sup> Sepember, </small>Sunday
+        </td>
+      </tr>
+      <tr class="time">
+        <td><b>08:00</b> to <b>09:00</b></td>
+      </tr>
+      <tr>
+        <td>
+          <em>Breakfast &amp; Registrations</em>
+        </td>
+      </tr>
+      <tr class="time">
+        <td><b>09:00</b> to <b>09:30</b></td>
+      </tr>
+      <tr class="talk">
+        <td>
+          <em>Introductions</em>
+          <div class="audi">Auditorium I</div>
+        </td>
+      </tr>
+      <tr class="time">
+        <td><b>09:30</b> to <b>10:15</b></td>
+      </tr>
+      <tr class="talk">
+        <td>
+          <em>Keynote by Kenneth Reitz</em>
+          <div class="audi">Auditorium I</div>
+        </td>
+      </tr>
+      <tr class="time">
+        <td><b>10:15</b> to <b>10:45</b></td>
+      </tr>
+      <tr class="talk">
+        <td>
+          <em>Break</em>
+        </td>
+      </tr>
+      <tr class="time">
+        <td><b>10:45</b> to <b>11:30</b></td>
+      </tr>
+      {{ render_talk_mobile(21, "Auditorium I") }}
+      {{ render_talk_mobile(88, "Auditorium II") }}
+      <tr class="time">
+        <td><b>11:30</b> to <b>12:15</b></td>
+      </tr>
+      {{ render_talk_mobile(82, "Auditorium I") }} {# django #}
+      {{ render_talk_mobile(103, "Auditorium II") }} {# zeromq #}
+
+      <tr class="time">
+        <td><b>12:15</b> to <b>13:00</b></td>
+      </tr>
+      {{ render_talk_mobile(36, "Auditorium I") }} 
+      {{ render_talk_mobile(32, "Auditorium II") }}
+
+      <tr class="time">
+        <td><b>13:00</b> to <b>14:00</b></td>
+      </tr>
+      <tr class="talk">
+        <td>
+          <em>Lunch</em>
+        </td>
+      </tr>
+
+      <tr class="time">
+        <td><b>14:00</b> to <b>14:45</b></td>
+      </tr>
+      {{ render_talk_mobile(73, "Auditorium I") }} 
+      {{ render_talk_mobile(70, "Auditorium II") }}
+      
+      <tr class="time">
+        <td><b>14:45</b> to <b>15:30</b></td>
+      </tr>
+      {{ render_talk_mobile(101, "Auditorium I") }} 
+      {{ render_talk_mobile(61, "Auditorium II") }}
+      <tr class="time">
+        <td><b>15:30</b> to <b>16:00</b></td>
+      </tr>
+      <tr class="talk">
+        <td>
+          <em>Break</em>
+        </td>
+      </tr>
+      <tr class="time">
+        <td><b>16:00</b> to <b>16:45</b></td>
+      </tr>
+      {{ render_talk_mobile(78, "Auditorium I") }} 
+      {{ render_talk_mobile(43, "Auditorium II") }}
+
+      <tr class="time">
+        <td><b>16:45</b> to <b>17:30</b></td>
+      </tr>
+      <tr class="talk">
+        <td>
+          <em>Lightening Talks</em>
+          <div class="audi">Auditorium I</div>          
+        </td>
+      </tr>
+
+    </tbody></table>
+    <div class="clearspace">&nbsp;</div>
   </section>
