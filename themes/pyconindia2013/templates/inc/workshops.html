@@ -1,4 +1,4 @@
-{% from theme('inc/macros.html') import render_talk with context  %}
+{% from theme('inc/macros.html') import render_talk, render_talk_mobile with context  %}
   
   <section id="workshops">
     <h2>workshops</h2>
@@ -18,7 +18,6 @@
           <td>{{ render_talk(51) }}</td> {# test your code #}
           <td>{{ render_talk(46)  }}</td> {# scikit-learn #}
           <td>{{ render_talk(47) }}</td> {# when to optimize #}
-
       </tr>
       <tr>
           <td class="heading"><b>12:00</b> to <b>13:00</b></td>
@@ -46,4 +45,53 @@
     <div>
       {{ fragment('2013', 'section-workshops').content }}
     </div>
+  </section>
+
+<section id="mobile-schedule">
+    <h2>workshops</h2>
+    <table class="mobile_schedule schedules_table">
+      <tbody><tr class="title">
+        <td colspan="2" class="light">
+          <small>30<sup>th</sup> August, </small>Friday
+        </td>
+      </tr>
+      <tr class="time">
+        <td><b>08:30</b> to <b>09:30</b></td>
+      </tr>
+      <tr>
+        <td>
+          <em>REGISTRATIONS</em>
+        </td>
+      </tr>
+      <tr class="time">
+        <td><b>09:30</b> to <b>12:00</b></td>
+      </tr>
+      {{ render_talk_mobile(51, "Auditorium I")}}  {# test your code #}    
+      {{ render_talk_mobile(46, "Auditorium II") }} {# scikit-learn #}
+      {{ render_talk_mobile(47, "Auditorium III") }} {# when to optimize #}
+      <tr class="time">
+        <td><b>12:00</b> to <b>13:00</b></td>
+      </tr>      
+      <tr>
+        <td><em>LUNCH</em></td>
+      </tr>
+
+      <tr class="time">
+        <td><b>13:00</b> to <b>14:30</b></td>
+      </tr>      
+      {{ render_talk_mobile(5, "Auditorium I")  }} {# selenium       #}
+      {{ render_talk_mobile(72, "Auditorium II") }}  {# pandas       #}
+      {{ render_talk_mobile(23, "Auditorium III") }} {# idiomatic        #}
+
+      <tr class="time">
+        <td><b>14:30</b> to <b>15:00</b></td>
+      </tr>      
+      <tr>
+        <td><em>TEA BREAK</em></td>
+      </tr>
+      {{ render_talk_mobile(31, "Auditorium I") }} {# celery         #}
+      {{ render_talk_mobile(34, "Auditorium II") }}  {# open stack   #}
+      {{ render_talk_mobile(4, "Auditorium III")  }} {# sphinx           #}
+    </tbody></table>
+    <div class="clearspace">&nbsp;</div>
   </section>

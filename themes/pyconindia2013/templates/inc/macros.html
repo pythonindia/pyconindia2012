@@ -55,6 +55,21 @@
 
 {% macro render_talk(id) -%}
     {% set talk = talks[id] %}
-    <a class="title" href="{{talk['url']}}">{{ talk['title'] }}</a><br/>
-    <a class="speaker" href="{{talk['url']}}">{{ talk['speaker'] }}</a>
+    <div class="talk">
+      <a class="title" href="{{talk['url']}}">{{ talk['title'] }}</a><br/>
+      <a class="speaker" href="{{talk['url']}}">{{ talk['speaker'] }}</a>
+    </div>
 {%- endmacro %}
+
+
+{% macro render_talk_mobile(id, audi) -%}
+    {% set talk = talks[id] %}
+    <tr class="talk">
+      <td>
+        <a class="title" href="{{talk['url']}}">{{ talk['title'] }}</a><br/>
+        <a class="speaker" href="{{talk['url']}}">{{ talk['speaker'] }}</a>
+        <div class="audi">{{audi}}</div>
+      </td>
+    </tr>
+{%- endmacro %}
+

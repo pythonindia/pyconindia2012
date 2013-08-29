@@ -386,3 +386,56 @@ footer a {
     text-shadow: none;
     text-decoration: underline;    
 }
+
+.schedules_table td {
+    text-align: center;
+}
+
+.schedules_table td.heading {
+    border-bottom: none;
+    border-top: 1px solid #ddd;
+}
+
+.schedules_table td div {
+    padding: 5px 0px;
+}
+
+.schedules_table td div.talk {
+    border-top: 1px solid #eee;
+}
+.schedules_table td div.talk:nth(1) {
+    border-top: none;
+}
+
+.schedules_table td a.title {
+    color: black;
+    font-size: 22px;
+    font-style: default;
+    text-decoration: none;
+    font: inherit;
+    text-align: center;
+}
+
+.audi {
+    font-size: 0.6em;
+}
+
+.mobile_schedule tr.time {
+    background: #eee;
+}
+
+.mobile_schedule tr.time td {
+    border-bottom: none;
+    border-top: 1px solid #ddd;
+}
+
+.mobile_schedule tr.talk {
+    border-top: 1px solid #eee;
+}
+.mobile_schedule tr.talk td {
+    border-bottom: none;    
+}
+
+table.mobile_schedule {
+    border-bottom: 2px solid #ddd;
+}
