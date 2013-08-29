@@ -496,3 +496,43 @@ table.mobile_schedule {
 .desktop-only {
     display: none;
 }
+
+.sponsors-list {
+    text-align: center;
+}
+
+@media screen and (min-width: 500px) {
+    img.platinum {
+        max-width: 500px;
+    }
+    img.gold {
+        max-width: 30%;
+    }
+    img.silver {
+        max-width: 25%;
+    }
+}
+
+@media screen and (max-width: 500px) and (min-width: 300px) {
+    img.platinum {
+        width: 100%;
+    }
+    img.gold {
+        max-width: 50%;
+    }
+    img.silver {
+        max-width: 33%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    img.platinum {
+        width: 100%;
+    }
+    img.gold {
+        max-width: 100%;
+    }
+    img.silver {
+        max-width: 50%;
+    }
+}
